@@ -8,6 +8,7 @@ let options = {
 
 let observer = new IntersectionObserver(cleaned, options);
 document.getElementById('title').style.opacity = 1;
+document.scrollingElement.scrollTop = 0;
 
 let info = document.getElementById('info');
 info.style.opacity = 0;
