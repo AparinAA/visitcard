@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import Card from './card';
 import SubcardCard from './subcard';
 import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
+import { prefix } from '../prefix.js';
 
 export default function Home() {
 
@@ -16,7 +17,7 @@ export default function Home() {
                 <link rel="icon" href="/aa.ico" />
             </Head>
             <Script 
-                src="/js.js"
+                src={`${prefix}/js.js`}
                 strategy="lazyOnload"
                 onLoad={() =>
                     console.log(`script loaded correctly, window.FB has been populated`)
@@ -126,7 +127,7 @@ export default function Home() {
                                 <p><a rel="noreferrer" href='https://github.com/AparinAA' target="_blank"><Github /> GitHub</a></p>
                                 <p><a rel="noreferrer" href="http://195.133.1.56:8091" target="_blank">
                                     <Image 
-                                        src='/favicon.png'
+                                        src={`${prefix}/favicon.png`}
                                         width={20}
                                         height={20}
                                         alt="Spread ico"
@@ -134,7 +135,7 @@ export default function Home() {
                                 </a></p>
                                 <p><a rel="noreferrer" href="https://iprofi-expert.ru" target="_blank">
                                     <Image 
-                                        src='/iexpert.png'
+                                        src={`${prefix}/iexpert.png`}
                                         width={16}
                                         height={16}
                                         alt="iexpert"
