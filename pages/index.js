@@ -14,7 +14,7 @@ export default function Home() {
             <Head>
                 <title>Person Info</title>
                 <meta name="description" content="" />
-                <link rel="icon" href="/aa.ico" />
+                <link rel="icon" href={`{prefix}/aa.ico`} />
             </Head>
             <Script 
                 src={`${prefix}/js.js`}
