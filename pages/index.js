@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import Card from './card';
 import SubcardCard from './subcard';
 import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
-import { prefix } from '../prefix.js';
+import prefix from '../prefix';
 
 export default function Home() {
 
