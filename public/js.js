@@ -2,7 +2,7 @@ const height = ( (document.documentElement.clientHeight - 50) / 3 ) + 'px';
 let options = {
     root: null,
     rootMargin: height,
-    threshold: new Array(20).fill(0).map( (item, index) => (index + 1) * 0.05)
+    threshold: new Array(50).fill(0).map( (item, index) => (index + 1) * 0.02)
 }
 
 
@@ -20,8 +20,8 @@ function cleaned(entries, observer) {
     
     if ( (Number(entry.target.style.opacity) <= 1.0) && (Number(entry.target.style.opacity) >= 0) ) {
         if ( (curPos > Number(entry.intersectionRatio) ) ) {
-            info.style.opacity = Number(info.style.opacity) + 0.1;
-            entry.target.style.opacity = Number(entry.target.style.opacity) - 0.1;
+            info.style.opacity = Number(info.style.opacity) + 0.05;
+            entry.target.style.opacity = Number(entry.target.style.opacity) - 0.05;
             
             if ( Number(entry.target.style.opacity) < 0) {
                 entry.target.style.opacity = 0;
@@ -30,9 +30,9 @@ function cleaned(entries, observer) {
             if ( Number(info.style.opacity) > 1) {
                 info.style.opacity = 1;
             }
-        } else if ( ( curPos < Number(entry.intersectionRatio) ) ) {
-            info.style.opacity = Number(info.style.opacity) - 0.1;
-            entry.target.style.opacity = Number(entry.target.style.opacity) + 0.1;
+        } else if ( ( curPos < Number(entry.intersectionRatio) ) && (Number(entry.intersectionRatio) > 0.3) ) {
+            info.style.opacity = Number(info.style.opacity) - 0.05;
+            entry.target.style.opacity = Number(entry.target.style.opacity) + 0.05;
             
             if (  Number(entry.target.style.opacity) > 1) {
                 entry.target.style.opacity = 1;
