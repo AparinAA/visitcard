@@ -10,7 +10,7 @@ info = document.getElementById('info'),
 curPos = 1;
 
 document.scrollingElement.scrollTop = 0;
-//document.getElementById('title').style.opacity = 1;
+document.getElementById('title').style.opacity = 1;
 info.style.opacity = 0;
 
 function cleaned(entries) {
