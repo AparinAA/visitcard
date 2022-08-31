@@ -18,7 +18,7 @@ function cleaned(entries) {
     console.info(entry.intersectionRatio)
     if ( (Number(entry.target.style.opacity) <= 1.0) && (Number(entry.target.style.opacity) >= 0) ) {
         info.style.opacity = 1 - Number(entry.intersectionRatio);
-        entry.target.style.opacity = Number(entry.intersectionRatio) * Number(entry.intersectionRatio) * Number(entry.intersectionRatio);
+        entry.target.style.opacity = Number(entry.intersectionRatio) * Number(entry.intersectionRatio) * Number(entry.intersectionRatio) * Number(entry.intersectionRatio);
     }
     curPos = Number(entry.intersectionRatio);
 }
