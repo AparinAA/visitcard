@@ -10,7 +10,7 @@ import prefix from '../prefix';
 export default function Home() {
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="body">
             <Head>
                 <title>Person Info</title>
                 <meta name="description" content="" />
