@@ -13,7 +13,7 @@ info.style.opacity = 0;
 function opacityControl(entries) {
     const [entry] = entries;
     const ratio = Number(entry.intersectionRatio);
-    console.info(ratio)
+
     info.style.opacity = 1 - ratio;
     entry.target.style.opacity = ratio * ratio * ratio * ratio;
 }
