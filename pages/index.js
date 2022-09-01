@@ -1,13 +1,43 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import { useEffect } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
 import Script from 'next/script';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 import Card from './card';
 import SubcardCard from './subcard';
 import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
-import prefix from '../prefix';
+//import prefix from '../prefix';
 
-export default function Home() {
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+export default function Home () {
+    
+    useEffect(function onFirstMount() {
+        const height = ( (document.documentElement.clientHeight - 50) / 10 ) + 'px';
+
+        const options = {
+            root: null,
+            rootMargin: height,
+            threshold: new Array(50).fill(0).map( (item, index) => (index + 1) * 0.02)
+        };
+        const observer = new IntersectionObserver(opacityControl, options);
+        const info = document.getElementById('info');
+
+        document.scrollingElement.scrollTop = 0;
+        info.style.opacity = 0;
+
+        function opacityControl(entries) {
+            const [entry] = entries;
+            const ratio = Number(entry.intersectionRatio);
+
+            info.style.opacity = 1 - ratio;
+            entry.target.style.opacity = ratio * ratio * ratio * ratio;
+        }
+
+        observer.observe(document.getElementById('title'));
+    }, []);
+    
+
 
     return (
         <div className={styles.container} id="body">
@@ -16,13 +46,7 @@ export default function Home() {
                 <meta name="description" content="" />
                 <link rel="icon" href={`${prefix}/aa.ico`} />
             </Head>
-            <Script 
-                src={`${prefix}/js.js`}
-                strategy="lazyOnload"
-                onLoad={() =>
-                    console.log(`script loaded correctly, window.FB has been populated`)
-                }
-            />
+            
             <div className={styles.title} id="title">
                 <p id="welcome-text">
                     Welcome to my visit card
