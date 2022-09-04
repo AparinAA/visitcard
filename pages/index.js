@@ -33,7 +33,8 @@ export default function Home () {
 
             info.style.opacity = 1 - ratio;
             entry.target.style.opacity = ratio * ratio * ratio * ratio;
-            welcome.style.transform = `scale(${2 - ratio})`;
+            console.info(`scale(${2 - ratio})`)
+            //welcome.style.transform = `scale(${2 - ratio})`;
         }
 
         observer.observe(document.getElementById('title'));
