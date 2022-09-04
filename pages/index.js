@@ -14,11 +14,13 @@ export default function Home () {
     
     useEffect(function onFirstMount() {
         const height = ( (document.documentElement.clientHeight - 50) / 10 ) + 'px';
-
+        const num = 100;
+        const rate = 1 / num;
+        
         const options = {
             root: null,
             rootMargin: height,
-            threshold: new Array(100).fill(0).map( (item, index) => (index + 1) * 0.01)
+            threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate)
         };
         const observer = new IntersectionObserver(opacityControl, options);
         const info = document.getElementById('info');
@@ -33,8 +35,6 @@ export default function Home () {
 
             info.style.opacity = 1 - ratio;
             entry.target.style.opacity = ratio * ratio * ratio * ratio;
-            console.info(`scale(${2 - ratio})`)
-            //welcome.style.transform = `scale(${2 - ratio})`;
         }
 
         observer.observe(document.getElementById('title'));
