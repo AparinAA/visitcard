@@ -22,6 +22,7 @@ export default function Home () {
         };
         const observer = new IntersectionObserver(opacityControl, options);
         const info = document.getElementById('info');
+        const welcome = document.getElementById('welcome-text');
 
         document.scrollingElement.scrollTop = 0;
         info.style.opacity = 0;
@@ -32,7 +33,7 @@ export default function Home () {
 
             info.style.opacity = 1 - ratio;
             entry.target.style.opacity = ratio * ratio * ratio * ratio;
-            entry.target.getElementsByTagName('p')[0].style.transform = `scale(${2 - ratio})`;
+            welcome.style.transform = `scale(${2 - ratio})`;
         }
 
         observer.observe(document.getElementById('title'));
