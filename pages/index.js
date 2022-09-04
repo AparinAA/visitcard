@@ -18,7 +18,7 @@ export default function Home () {
         const options = {
             root: null,
             rootMargin: height,
-            threshold: new Array(50).fill(0).map( (item, index) => (index + 1) * 0.02)
+            threshold: new Array(100).fill(0).map( (item, index) => (index + 1) * 0.01)
         };
         const observer = new IntersectionObserver(opacityControl, options);
         const info = document.getElementById('info');
@@ -32,6 +32,7 @@ export default function Home () {
 
             info.style.opacity = 1 - ratio;
             entry.target.style.opacity = ratio * ratio * ratio * ratio;
+            entry.target.getElementsByTagName('p')[0].style.transform = `scale(${2 - ratio})`;
         }
 
         observer.observe(document.getElementById('title'));
