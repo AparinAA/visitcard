@@ -16,7 +16,6 @@ export default function Home () {
         const height = ( (document.documentElement.clientHeight - 50) / 10 ) + 'px';
         const num = 100;
         const rate = 1 / num;
-        
         const options = {
             root: null,
             rootMargin: height,
