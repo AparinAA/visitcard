@@ -112,7 +112,7 @@ export default function Home () {
 
                         <Card title="Proficient">
                             <SubcardCard>
-                                <ul>
+                                <ul className={styles.list}>
                                     <li>Python</li>
                                     <li>JavaScript</li>
                                     <li>Django</li>

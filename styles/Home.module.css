@@ -105,12 +105,10 @@
   color: inherit;
   text-decoration: none;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .card h2 {
   background-color: white;
-  position: sticky;
   height: 50px;
   top: 0;
   display: flex;
@@ -118,6 +116,12 @@
   padding: 0;
   align-items: center;
   font-size: 24px;
+}
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 .card p {
@@ -143,7 +147,6 @@
   color: inherit;
   text-decoration: none;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .subcard h2 {
@@ -173,6 +176,21 @@
   color: rgb(75, 75, 75);
   border-radius: 5px;
   border: 1px solid gray;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+}
+
+.list > li {
+  display: inline;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0 5px;
+  padding: 3px 10px;
+  background-color: #0071f398;
+  border-radius: 9px;
 }
 
 .subcard .lang:hover {
