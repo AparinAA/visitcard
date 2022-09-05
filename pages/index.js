@@ -10,8 +10,6 @@ import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-let flag = true;
-
 export default function Home () {
     const num = 100;
     const rate = 1 / num;
@@ -22,12 +20,8 @@ export default function Home () {
         threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate),
     });
 
-    let ratio = entry?.intersectionRatio ?? 1;
-    if (flag) {
-        ratio = 1;
-        flag = false;
-    }
-    
+    const ratio = entry?.intersectionRatio ?? 1;
+
     return (
         <div className={styles.container} id="body">
             <Head>

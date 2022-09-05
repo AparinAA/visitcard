@@ -51,9 +51,7 @@
 }
 
 .title p {
-  display: fixed;
-  bottom: 0;
-  /*height: 100px;*/
+  height: 100px;
   font-weight: bold;
   font-size: 5vw;
   white-space: nowrap;
