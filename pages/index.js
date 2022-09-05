@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import Head from 'next/head';
@@ -8,9 +7,10 @@ import styles from '../styles/Home.module.css';
 import Card from './card';
 import SubcardCard from './subcard';
 import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
-//import prefix from '../prefix';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+let flag = true;
 
 export default function Home () {
     const num = 100;
@@ -21,8 +21,13 @@ export default function Home () {
         rootMargin: 0,
         threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate),
     });
-    const ratio = entry?.intersectionRatio ?? 1;
 
+    let ratio = entry?.intersectionRatio ?? 1;
+    if (flag) {
+        ratio = 1;
+        flag = false;
+    }
+    
     return (
         <div className={styles.container} id="body">
             <Head>
