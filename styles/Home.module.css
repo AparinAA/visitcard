@@ -184,10 +184,10 @@
 }
 
 .list > li {
-  display: inline;
+  display: inline-block;
   box-sizing: border-box;
   list-style-type: none;
-  margin: 0 5px;
+  margin: 5px;
   padding: 3px 10px;
   background-color: #0071f398;
   border-radius: 9px;
