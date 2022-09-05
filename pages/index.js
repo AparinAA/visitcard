@@ -31,7 +31,7 @@ export default function Home () {
                 <link rel="icon" href={`${prefix}/aa.ico`} />
             </Head>
             
-            <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio, 'transform' : `scale(${2 - ratio})`}}>
+            <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio, 'transform' : `scale(${2 - ratio * 1.1})`}}>
                 <p id="welcome-text">
                     Welcome to my visit card
                     <br />
