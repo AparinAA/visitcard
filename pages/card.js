@@ -1,5 +1,4 @@
 import styles from '../styles/Home.module.css';
-import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export default function Card(props) {

@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
@@ -11,35 +13,15 @@ import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home () {
-    
-    useEffect(function onFirstMount() {
-        const height = ( (document.documentElement.clientHeight - 50) / 10 ) + 'px';
-        const num = 100;
-        const rate = 1 / num;
-        const options = {
-            root: null,
-            rootMargin: height,
-            threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate)
-        };
-        const observer = new IntersectionObserver(opacityControl, options);
-        const info = document.getElementById('info');
-        const welcome = document.getElementById('welcome-text');
-
-        document.scrollingElement.scrollTop = 0;
-        info.style.opacity = 0;
-
-        function opacityControl(entries) {
-            const [entry] = entries;
-            const ratio = Number(entry.intersectionRatio);
-
-            info.style.opacity = 1 - ratio;
-            entry.target.style.opacity = ratio * ratio * ratio * ratio;
-        }
-
-        observer.observe(document.getElementById('title'));
-    }, []);
-    
-
+    const num = 100;
+    const rate = 1 / num;
+    const [ref, inView, entry] = useInView({
+        /* Optional options */
+        root: null,
+        rootMargin: 0,
+        threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate),
+    });
+    const ratio = entry?.intersectionRatio ?? 1;
 
     return (
         <div className={styles.container} id="body">
@@ -49,7 +31,7 @@ export default function Home () {
                 <link rel="icon" href={`${prefix}/aa.ico`} />
             </Head>
             
-            <div className={styles.title} id="title">
+            <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio, 'transform' : `scale(${2 - ratio})`}}>
                 <p id="welcome-text">
                     Welcome to my visit card
                     <br />
@@ -58,7 +40,7 @@ export default function Home () {
             </div>
             <main className={styles.main} id="main">
                 <div className={styles.grid}>
-                    <div className={styles.info} id="info" >
+                    <div className={styles.info} id="info" style={{"opacity": 1 - ratio}}>
                         <Card title="About me">
                             <SubcardCard>
                                 <p>Aleksandr Aparin (mathematician, developer)</p>
