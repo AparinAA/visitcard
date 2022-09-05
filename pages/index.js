@@ -32,7 +32,7 @@ export default function Home () {
             </Head>
             
             <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio}}>
-                <p id="welcome-text" style={{'transform' : `scale(${2 - ratio * 1.1})`}}>
+                <p id="welcome-text">
                     Welcome to my visit card
                     <br />
                     <small style={{"opacity": "0.7"}}>Aleksandr Aparin</small>
