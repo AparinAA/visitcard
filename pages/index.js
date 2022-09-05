@@ -22,11 +22,7 @@ export default function Home () {
         threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate),
     });
 
-    let ratio = entry?.intersectionRatio ?? 1;
-    if (flag) {
-        ratio = 1;
-        flag = false;
-    }
+    const ratio = entry?.intersectionRatio ?? 1;
     
     return (
         <div className={styles.container} id="body">
