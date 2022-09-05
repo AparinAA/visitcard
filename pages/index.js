@@ -6,7 +6,7 @@ import Script from 'next/script';
 import styles from '../styles/Home.module.css';
 import Card from './card';
 import SubcardCard from './subcard';
-import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
+import { SendFill, EnvelopeFill, Github, CaretDownFill } from 'react-bootstrap-icons';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -122,10 +122,10 @@ export default function Home () {
                                 <span>National Research University Higher School of Economics</span>
                                 <small><span>Oct. 2019 - Jun. 2022</span></small>
                                 <ul>
-                                    <li>Create web site for expert review using Django, React.js</li>
+                                    <li>Created the website for expert review used Django, React.js</li>
                                     <li>Participated in the creation of the largest student competition</li>
-                                    <li>Training and creating contests in Yandex.Contest's system</li>
-                                    <li>Participated created pivot tables</li>
+                                    <li>Trained and created the contests in Yandex.Contest's system</li>
+                                    <li>Participated create the pivot tables</li>
                                 </ul>
                             </SubcardCard>
                         </Card>
