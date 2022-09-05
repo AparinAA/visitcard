@@ -122,9 +122,9 @@ export default function Home () {
                                 <span>National Research University Higher School of Economics</span>
                                 <small><span>Oct. 2019 - Jun. 2022</span></small>
                                 <ul>
-                                    <li>Created the website for expert review used Django, React.js</li>
+                                    <li>Created the website "Я-эксперт" for expert review used Django, React.js</li>
                                     <li>Participated in the creation of the largest student competition</li>
-                                    <li>Trained and created the contests in Yandex.Contest's system</li>
+                                    <li>Trained and created the contests in Yandex.Contest's system used <i>Python, C++</i></li>
                                     <li>Participated create the pivot tables</li>
                                 </ul>
                             </SubcardCard>
