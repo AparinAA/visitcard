@@ -49,6 +49,7 @@
   background-attachment: fixed;
   background-size: 77%;
   background-position: 50% 50%;
+  -webkit-background-position: 50% 50%;
 }
 
 .description {
