@@ -20,7 +20,7 @@ export default function Home () {
         threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate),
     });
 
-    const ratio = entry?.intersectionRatio ?? 1;
+    const ratio = 1; //entry?.intersectionRatio ?? 1;
 
     /*
     <p id="welcome-text">
