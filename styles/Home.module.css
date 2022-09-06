@@ -41,11 +41,17 @@
 
 .title {
   display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   height: 100vh;
   width: 100%;
 }
 
+.title img {
+  width: 100%;
+  height: 100px;
+}
 .description {
   margin: 4rem 0;
   line-height: 1.5;
