@@ -16,6 +16,16 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+ul > li {
+  margin-bottom: 5px;
+  padding-left: 0;
+}
+
 * {
   box-sizing: border-box;
 }

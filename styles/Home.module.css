@@ -183,8 +183,8 @@
 }
 
 .list {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .list > li {
@@ -192,10 +192,11 @@
   display: inline-block;
   box-sizing: border-box;
   list-style-type: none;
-  margin: 5px;
-  padding: 3px 10px;
+  margin: 5px !important;
+  padding: 3px 10px !important;
   background-color: #0071f398;
-  border-radius: 9px;
+  border-radius: 9px !important;
+  border: none !important;
 }
 
 
