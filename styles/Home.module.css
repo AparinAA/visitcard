@@ -42,18 +42,13 @@
 .title {
   z-index: 1;
   height: 100vh;
-  background-image: url('../public/welcomtext.svg');
+  background-image: url('../public/welcomtextMini.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: 77%;
   display: table;
   width: 100%;
-  line-height: 1.15;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
 }
 
 .title p {
