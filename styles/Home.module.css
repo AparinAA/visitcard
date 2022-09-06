@@ -107,6 +107,7 @@
 }
 
 .card h2 {
+  z-index: 5;
   background-color: white;
   height: 50px;
   top: 0;
@@ -208,5 +209,26 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media (min-height: 1500px) and (min-width: 1500px) {
+  .title {
+    background-size: 50%;
+  }
+  
+  .info {
+    flex-direction: row;
+    row-gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 80vh;
+    margin: auto 0;
+  }
+
+  .info > div {
+    width: 700px;
   }
 }
