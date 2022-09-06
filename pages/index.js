@@ -1,12 +1,13 @@
 import { useInView } from 'react-intersection-observer';
+//import { useEffect } from 'react';
 
 import Head from 'next/head';
 import Image from 'next/image';
-import Script from 'next/script';
+//import Script from 'next/script';
 import styles from '../styles/Home.module.css';
 import Card from './card';
 import SubcardCard from './subcard';
-import { SendFill, EnvelopeFill, Github, CaretDownFill } from 'react-bootstrap-icons';
+import { SendFill, EnvelopeFill, Github } from 'react-bootstrap-icons';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -37,7 +38,13 @@ export default function Home () {
                 <link rel="icon" href={`${prefix}/aa.ico`} />
             </Head>
             
-            <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}>
+            <div 
+                className={styles.title}
+                id="title" ref={ref}
+                //style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMax.svg)`}}
+                style={{'opacity' : ratio * ratio * ratio * ratio}}
+            >
+                <img src={`${prefix}/welcomtextMax.svg`} alt="welcome"/>
             </div>
             <main className={styles.main} id="main">
                 <div className={styles.grid}>

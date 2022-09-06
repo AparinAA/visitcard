@@ -40,26 +40,10 @@
 }
 
 .title {
+  display: flex;
   z-index: 1;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: 77%;
-  display: table;
   width: 100%;
-}
-
-.title p {
-  height: 100px;
-  font-weight: bold;
-  font-size: 5vw;
-  white-space: nowrap;
-}
-
-.title,
-.description {
-  text-align: center;
 }
 
 .description {
@@ -230,4 +214,10 @@
   .info > div {
     width: 700px;
   }
+}
+
+.fix {
+  display: fixed !important;
+  top: 0;
+  left: 0;
 }
