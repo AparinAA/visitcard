@@ -98,8 +98,9 @@ export default function Home () {
                             <SubcardCard>
                                 <ul className={styles.list}>
                                     <li>Python</li>
-                                    <li>JavaScript</li>
                                     <li>Django</li>
+                                    <li>JavaScript</li>
+                                    <li>TypeScript</li>
                                     <li>React.js</li>
                                     <li>Next.js</li>
                                     <li>TeX</li>
