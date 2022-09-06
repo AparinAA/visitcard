@@ -44,6 +44,12 @@ export default function Home () {
                 <div className={styles.grid}>
                     <div className={styles.info} id="info" style={{"opacity": 1 - ratio}}>
                         <Card title="About me">
+                        <Image 
+                                        src={`${prefix}/welcomtextMini.svg`}
+                                        width={16}
+                                        height={16}
+                                        alt="iexpert"
+                                    />
                             <SubcardCard>
                                 <p>Aleksandr Aparin (mathematician, developer)</p>
                                 <p>21.12.1995</p>
