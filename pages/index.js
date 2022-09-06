@@ -16,12 +16,19 @@ export default function Home () {
     const [ref, inView, entry] = useInView({
         /* Optional options */
         root: null,
-        rootMargin: 0,
+        rootMargin: '0px',
         threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate),
     });
 
     const ratio = entry?.intersectionRatio ?? 1;
 
+    /*
+    <p id="welcome-text">
+                    Welcome to my visit card
+                    <br />
+                    <small style={{"opacity": "0.7"}}>Aleksandr Aparin</small>
+                </p>
+                */
     return (
         <div className={styles.container} id="body">
             <Head>
@@ -31,11 +38,7 @@ export default function Home () {
             </Head>
             
             <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio}}>
-                <p id="welcome-text">
-                    Welcome to my visit card
-                    <br />
-                    <small style={{"opacity": "0.7"}}>Aleksandr Aparin</small>
-                </p>
+                
             </div>
             <main className={styles.main} id="main">
                 <div className={styles.grid}>
@@ -122,7 +125,7 @@ export default function Home () {
                                 <span>National Research University Higher School of Economics</span>
                                 <small><span>Oct. 2019 - Jun. 2022</span></small>
                                 <ul>
-                                    <li>Created the website "Я-эксперт" for expert review used Django, React.js</li>
+                                    <li>Created the website "Я-эксперт" for expert review used <i>Django, React.js</i></li>
                                     <li>Participated in the creation of the largest student competition</li>
                                     <li>Trained and created the contests in Yandex.Contest's system used <i>Python, C++</i></li>
                                     <li>Participated create the pivot tables</li>

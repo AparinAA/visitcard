@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 export default function Card(props) {
     const { ref, inView } = useInView({
         /* Optional options */
+        rootMargin: '0px',
         threshold: [0, 1.0],
     });
 
