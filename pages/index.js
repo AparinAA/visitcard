@@ -13,7 +13,7 @@ const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home () {
     const num = 100;
-    const rate = 1 / num;
+    const rate = 1 / (num + 1);
     const [ref, inView, entry] = useInView({
         /* Optional options */
         root: null,
@@ -41,12 +41,12 @@ export default function Home () {
             <div 
                 className={styles.title}
                 id="title" ref={ref}
-                style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
+                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
             />
                 
             <main className={styles.main} id="main">
                 <div className={styles.grid}>
-                    <div className={styles.info} id="info" style={{"opacity": 1 - ratio}}>
+                    <div className={styles.info} id="info" style={{"opacity": 1 - 1.2 * ratio}}>
                         <Card title="About me">
                             <SubcardCard>
                                 <p>Aleksandr Aparin (mathematician, developer)</p>
@@ -107,6 +107,7 @@ export default function Home () {
                                     <li>TypeScript</li>
                                     <li>React.js</li>
                                     <li>Next.js</li>
+                                    <li>Git</li>
                                     <li>TeX</li>
                                 </ul>
                             </SubcardCard>
