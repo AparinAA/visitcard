@@ -41,7 +41,7 @@ export default function Home () {
             <div 
                 className={styles.title}
                 id="title" ref={ref}
-                style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/firstText.png)`}}
+                style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
             />
                 
             <main className={styles.main} id="main">
