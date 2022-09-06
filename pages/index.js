@@ -33,7 +33,7 @@ export default function Home () {
     return (
         <div className={styles.container} id="body">
             <Head>
-                <title>Person Info</title>
+                <title>Visit card</title>
                 <meta name="description" content="" />
                 <link rel="icon" href={`${prefix}/aa.ico`} />
             </Head>
@@ -41,11 +41,9 @@ export default function Home () {
             <div 
                 className={styles.title}
                 id="title" ref={ref}
-                //style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMax.svg)`}}
-                style={{'opacity' : ratio * ratio * ratio * ratio}}
-            >
-                <img src={`${prefix}/welcomtextMax.svg`} alt="welcome"/>
-            </div>
+                style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/firstText.png)`}}
+            />
+                
             <main className={styles.main} id="main">
                 <div className={styles.grid}>
                     <div className={styles.info} id="info" style={{"opacity": 1 - ratio}}>
