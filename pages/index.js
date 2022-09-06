@@ -37,19 +37,12 @@ export default function Home () {
                 <link rel="icon" href={`${prefix}/aa.ico`} />
             </Head>
             
-            <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio}}>
-                
+            <div className={styles.title} id="title" ref={ref} style={{'opacity' : ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}>
             </div>
             <main className={styles.main} id="main">
                 <div className={styles.grid}>
                     <div className={styles.info} id="info" style={{"opacity": 1 - ratio}}>
                         <Card title="About me">
-                        <Image 
-                                        src={`${prefix}/welcomtextMini.svg`}
-                                        width={16}
-                                        height={16}
-                                        alt="iexpert"
-                                    />
                             <SubcardCard>
                                 <p>Aleksandr Aparin (mathematician, developer)</p>
                                 <p>21.12.1995</p>

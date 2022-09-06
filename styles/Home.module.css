@@ -42,7 +42,6 @@
 .title {
   z-index: 1;
   height: 100vh;
-  background-image: url('../public/welcomtextMini.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
