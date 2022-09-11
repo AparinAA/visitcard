@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import ReactDOM from 'react-dom'
+import parse, { attributesToProps } from 'html-react-parser';
 
 import Head from 'next/head';
 import Image from 'next/image';
@@ -18,7 +18,7 @@ export default function Home ({prop}) {
         /* Optional options */
         root: null,
         rootMargin: '0px',
-        threshold: new Array(num).fill(0).map( (item, index) => (index + 1) * rate),
+        threshold: new Array(num).fill(0).map( (_item, index) => (index + 1) * rate),
     });
 
     const ratio = entry?.intersectionRatio ?? 1;
@@ -31,14 +31,10 @@ export default function Home ({prop}) {
                 {
                     id: 1,
                     title: 'Aleksandr Aparin (mathematician, developer)',
-                    child: <><p><a rel="noreferrer" href="https://t.me/alxaparin" taget="_blank">
-                                <SendFill style={{margin: "0 3px 0 0", padding: "5px 0 0 0"}}/>
-                                @alxaparin
-                            </a></p>
-                            <p><a rel="noreferrer" href='mailto:alxaparin@mgail.com' target="_blank">
-                                <EnvelopeFill style={{margin: "0 3px 0 0", padding: "5px 0 0 0"}}/>
-                                alxaparin@gmail.com
-                            </a></p></>
+                    child:  <>
+                              <p><a className={styles.telegram} rel="noreferrer" href="https://t.me/alxaparin" taget="_blank"> @alxaparin</a></p>
+                              <p><a className={styles.email} rel="noreferrer" href='mailto:alxaparin@mgail.com' target="_blank"> alxaparin@gmail.com</a></p>
+                            </>
                 }
             ],
             
@@ -116,11 +112,11 @@ export default function Home ({prop}) {
                     title: 'Main deputy chief',
                     description: 'Lomonosov Moscow State University. Department Admissions Committee and work with matriculant',
                     subdescription: 'Feb. 2016 - Oct. 2019',
-                    child: <ul>
+                    child: `<ul>
                                 <li>Personnel management</li>
                                 <li>Generation pivot table</li>
                                 <li>Analysis of various data</li> 
-                            </ul>
+                            </ul>`
                                 
                 },
                 {
@@ -128,12 +124,12 @@ export default function Home ({prop}) {
                     title: 'Data analyst, task management and coordination',
                     description: 'National Research University Higher School of Economics',
                     subdescription: 'Oct. 2019 - Jun. 2022',
-                    child:  <ul>
+                    child:  `<ul>
                                 <li>Created the website "Я-эксперт" for expert review used <i>Django, React.js</i></li>
                                 <li>Participated in the creation of the largest student competition</li>
                                 <li>Trained and created the contests in Yandex.Contest's system used <i>Python, C++</i></li>
                                 <li>Participated create the pivot tables</li>
-                            </ul>
+                            </ul>`
                 }
             ]
         },
@@ -144,29 +140,10 @@ export default function Home ({prop}) {
                 {
                     id: 1,
                     child: <>
-                            <p><a rel="noreferrer" href='https://github.com/AparinAA' target="_blank"><Github /> GitHub</a></p>
-                                    <p><a rel="noreferrer" href="http://195.133.1.56:8091" target="_blank">
-                                        <Image 
-                                            src={`${prefix}/favicon.png`}
-                                            width={20}
-                                            height={20}
-                                            alt="Spread ico"
-                                        /> SpreadMeta
-                                    </a></p>
-                                    <p><a rel="noreferrer" href="https://iprofi-expert.ru" target="_blank">
-                                        <Image 
-                                            src={`${prefix}/iexpert.png`}
-                                            width={16}
-                                            height={16}
-                                            alt="iexpert"
-                                        /> Я-эксперт
-                                    </a></p>
-                                    <p><a rel="noreferrer" href="https://www.npmjs.com/~x6p" target="_blank">
-                                        <svg style={{"position": "relative", "top": "-2px", "width": "20px"}} viewBox="0 0 780 250">
-                                            <path fill="#231F20" d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"></path>
-                                        </svg>
-                                    npm packages
-                                    </a></p>
+                            <p><a className={styles.github} rel="noreferrer" href='https://github.com/AparinAA' target="_blank"> GitHub</a></p>
+                            <p><a className={styles.spread} rel="noreferrer" href="http://195.133.1.56:8091" target="_blank"> SpreadMeta</a></p>
+                            <p><a className={styles.iexpert} rel="noreferrer" href="https://iprofi-expert.ru" target="_blank">Я-эксперт</a></p>
+                            <p><a className={styles.npm} rel="noreferrer" href="https://www.npmjs.com/~x6p" target="_blank"> npm packages</a></p>
                             </>
                 }
             ]
@@ -177,23 +154,27 @@ export default function Home ({prop}) {
             info: [
                 {
                     id: 1,
-                    child: <>
-                                <p>Finance</p>
-                                <p>Crypto</p>
-                            </>
+                    child: ` <p>Finance</p>
+                             <p>Crypto</p>
+                            `
                 }
             ]
         },        
     ]
-    let str = `<p><a rel="noreferrer" href="https://t.me/alxaparin" taget="_blank">
-    <SendFill style={{margin: "0 3px 0 0", padding: "5px 0 0 0"}}/>
+    let str = `<p><a className={styles.telegram} rel="noreferrer" href="https://t.me/alxaparin" taget="_blank">
     @alxaparin
 </a></p>
-<p><a rel="noreferrer" href='mailto:alxaparin@mgail.com' target="_blank">
-    <EnvelopeFill style={{margin: "0 3px 0 0", padding: "5px 0 0 0"}}/>
+<p><a className={styles.email} rel="noreferrer" href='mailto:alxaparin@mgail.com' target="_blank">
     alxaparin@gmail.com
 </a></p>`
     
+    parse(str, {
+        replace: domNode => {
+            
+            const classname = styles[domNode?.attribs?.classname?.replace(/[{}]/g, '')?.split('.')[1]];
+
+        }
+    })
     return (
         <div className={styles.container} id="body">
             <Head>
@@ -220,7 +201,11 @@ export default function Home ({prop}) {
                                         title={infItem?.title}
                                         description={infItem?.description}
                                         subdescription={infItem?.subdescription}
-                                    > {infItem?.child} </SubcardCard>
+                                    >{
+                                        typeof infItem?.child === 'string' ?
+                                        <div dangerouslySetInnerHTML={{ __html: infItem?.child }}/> :
+                                        infItem?.child
+                                    }</SubcardCard>
                                 })}
                                 {item?.child}
                             </Card>

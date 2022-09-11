@@ -223,3 +223,32 @@
   top: 0;
   left: 0;
 }
+
+:where(.telegram, .email, .spread, .iexpert)::before {
+  position: relative;
+  top: 2px;
+}
+
+.telegram::before {
+  content: url('../public/send-fill.svg');
+}
+
+.email::before {
+  content: url('../public/envelope-fill.svg');
+}
+
+.github::before {
+  content: url('../public/github.svg');
+}
+
+.spread::before {
+  content: url('../public/icospread.svg');
+}
+
+.iexpert::before {
+  content: url('../public/ixpert.svg');
+}
+
+.npm::before {
+  content: url('../public/npm.svg');
+}
