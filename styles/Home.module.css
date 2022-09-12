@@ -153,35 +153,35 @@
   color: gray;
 }
 
-.subcard .lang {
+.list-link-horizontal {
   font-size: 14px;
   display: inline-block;
-  margin: 0 5px;
-  padding: 0 3px;
+  margin: 5px 5px 0 0;
+  padding: 3px 12px;
   color: rgb(75, 75, 75);
   border-radius: 5px;
   border: 1px solid gray;
 }
 
-.list {
+.list-horizontal {
   padding: 0 !important;
   margin: 0 !important;
 }
 
-.list > li {
+.list-horizontal > li {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   list-style-type: none;
-  margin: 5px !important;
-  padding: 3px 10px !important;
+  margin: 5px 5px 0 0 !important;
+  padding: 3px 12px !important;
   background-color: #0071f398;
-  border-radius: 9px !important;
+  border-radius: 5px !important;
   border: none !important;
 }
 
 
-.subcard .lang:hover {
+.list-link-horizontal:hover {
   background-color: rgb(236, 236, 236);
 }
 
@@ -224,9 +224,16 @@
   left: 0;
 }
 
-:where(.telegram, .email, .spread, .iexpert)::before {
+.list-link {
+  display: block;
+  margin: 4px 0;
+  padding: 2px 0;
+}
+
+.list-link::before {
   position: relative;
   top: 2px;
+  left: -3px;
 }
 
 .telegram::before {
@@ -251,4 +258,8 @@
 
 .npm::before {
   content: url('../public/npm.svg');
+}
+
+.long-long {
+
 }
