@@ -15,14 +15,14 @@ export default function SubcardCard(props) {
                         className={`${item?.ico ? styles[item.ico] : ''} ${styles[type]}`}
                         rel="noreferrer" href={item.url}
                         target="_blank">
-                            <ReactMarkdown children={item.name} components={{p: React.Fragment}}/>
+                            <ReactMarkdown components={{p: React.Fragment}}>{item.name}</ReactMarkdown>
                         </a>
             }
             if (type === 'list-horizontal' || type === 'list-list') {
-                return <li key={`list-hor-${item}`}><ReactMarkdown children={item} components={{p: React.Fragment}}/></li>
+                return <li key={`list-hor-${item}`}><ReactMarkdown components={{p: React.Fragment}}>{item}</ReactMarkdown></li>
             }
 
-            return <ReactMarkdown key={item} children={item} />;
+            return <ReactMarkdown key={item}>{item}</ReactMarkdown>;
         });
 
         body = (type === 'list-horizontal' || type === 'list-list') ? <ul className={styles[type]}>{body}</ul> : <>{body}</>;
