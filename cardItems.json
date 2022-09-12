@@ -96,7 +96,11 @@
                 "subdescription": "Feb. 2016 - Oct. 2019",
                 "child": {
                     "type": "list-list",
-                    "items": ["Personnel management", "Generation pivot table", "Analysis of various data"]
+                    "items": [
+                        "Personnel management",
+                        "Generation pivot table",
+                        "Analysis of various data"
+                    ]
                 }           
             },
             {
@@ -162,7 +166,10 @@
                 "id": 1,
                 "child": {
                     "type": "text",
-                    "items": ["Finance", "Crypto"]
+                    "items": [
+                        "Finance", 
+                        "Crypto"
+                    ]
                 }
             }
         ]
