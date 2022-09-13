@@ -111,9 +111,9 @@
                 "child": {
                     "type": "list-list",
                     "items": [
-                        "Created the website «Я-эксперт» for expert review used *Django, React.js*",
+                        "Created the website «Я-эксперт» for expert review using *Django, React.js*",
                         "Participated in the creation of the largest student competition",
-                        "Trained and created the contests in Yandex.Contest\"s system used *Python, C++*",
+                        "Trained and created the contests in Yandex.Contest system using *Python, C++*",
                         "Participated create the pivot tables"
                     ]
                 }
