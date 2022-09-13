@@ -17,11 +17,10 @@ export default function Home ({listCard}) {
         /* Optional options */
         root: null,
         rootMargin: '0px',
-        threshold: new Array(num).fill(0).map( (_item, index) => (index + 1) * rate),
+        threshold: (new Array(num).fill(0).map( (_item, index) => (index + 1) * rate)).slice(10),
     });
 
     const ratio = entry?.intersectionRatio ?? 1;
-
     return (
         <div className={styles.container} id="body">
             <Head>
