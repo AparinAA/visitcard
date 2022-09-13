@@ -16,8 +16,8 @@ export default function Home ({listCard}) {
     const [ref, inView, entry] = useInView({
         /* Optional options */
         root: null,
-        rootMargin: '0px',
-        threshold: (new Array(num).fill(0).map( (_item, index) => (index + 1) * rate)).slice(10),
+        rootMargin: '50px',
+        threshold: (new Array(num).fill(0).map( (_item, index) => (index + 1) * rate)),
     });
 
     const ratio = entry?.intersectionRatio ?? 1;
