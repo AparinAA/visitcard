@@ -6,6 +6,5 @@ export function readData(prefix) {
     const listCard = JSON.parse(fs.readFileSync(pathDirectory, {"encoding": "utf-8"}));
 
     listCard.sort( (a, b) => a.id - b.id < 0);
-    console.info(listCard.sort( (a, b) =>  (+a.id) - (+b.id) ), listCard)
     return listCard;
 }

@@ -16,7 +16,7 @@ export default function Home ({listCard}) {
 
     const [ref, inView, entry] = useInView({
         /* Optional options */
-        rootMargin: '0px',
+        rootMargin: '70px',
         threshold: [...Array(num).keys()].map( index => (index + 1) * rate),
     });
 
