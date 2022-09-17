@@ -28,7 +28,7 @@
         
     },
     {
-        "id": 2,
+        "id": 5,
         "title": "Education",
         "info": [
             {
@@ -46,7 +46,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 6,
         "title": "Science work",
         "info": [
             {
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 3,
         "title": "Proficient",
         "info": [
             {
@@ -86,7 +86,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 2,
         "title": "Work experience",
         "info": [
             {
@@ -121,7 +121,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 4,
         "title": "Projects",
         "info": [
             {

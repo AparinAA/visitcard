@@ -1,6 +1,5 @@
 import styles from '../styles/Home.module.css';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import React from 'react';
 
 export default function SubcardCard(props) {

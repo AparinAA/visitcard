@@ -3,5 +3,9 @@ import fs from 'fs';
 
 export function readData(prefix) {
     const pathDirectory = path.join('', 'data/cardItems.json');
-    return JSON.parse(fs.readFileSync(pathDirectory, {"encoding": "utf-8"}));
+    const listCard = JSON.parse(fs.readFileSync(pathDirectory, {"encoding": "utf-8"}));
+
+    listCard.sort( (a, b) => a.id - b.id < 0);
+    console.info(listCard.sort( (a, b) =>  (+a.id) - (+b.id) ), listCard)
+    return listCard;
 }

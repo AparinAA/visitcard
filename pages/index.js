@@ -13,11 +13,11 @@ const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export default function Home ({listCard}) {
     const num = 100;
     const rate = 1 / (num + 1);
+
     const [ref, inView, entry] = useInView({
         /* Optional options */
-        root: null,
-        rootMargin: '100px',
-        threshold: (new Array(num).fill(0).map( (_item, index) => (index + 1) * rate)),
+        rootMargin: '0px',
+        threshold: [...Array(num).keys()].map( index => (index + 1) * rate),
     });
 
     const ratio = entry?.intersectionRatio ?? 1;
