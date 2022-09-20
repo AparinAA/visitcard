@@ -16,7 +16,8 @@ export default function Home ({listCard}) {
 
     const [ref, inView, entry] = useInView({
         /* Optional options */
-        rootMargin: '70px',
+        root: null,
+        rootMargin: '80px',
         threshold: [...Array(num).keys()].map( index => (index + 1) * rate),
     });
 
@@ -31,14 +32,14 @@ export default function Home ({listCard}) {
             
             <div 
                 className={styles.title}
-                id="title" ref={ref}
-                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
+                id="title"
+                ref={ref}
+                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
             />
             
-            
-            <main className={styles.main} id="main">
+            <main className={styles.main} id="main" >
                 <div className={styles.grid}>
-                    <div className={styles.info} id="info" style={{"opacity": 1 - 1.2 * ratio}}>
+                    <div className={styles.info} id="info" style={{"opacity":  1 - 1.2 * ratio }}>
                         {listCard?.map( item => (
                             <Card title={item?.title} key={`card_${item.id}`}>
                                 {item.info.map( infItem => {
