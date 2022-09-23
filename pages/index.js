@@ -34,7 +34,7 @@ export default function Home ({listCard}) {
                 className={styles.title}
                 id="title"
                 ref={ref}
-                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
+                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
             />
             
             <main className={styles.main} id="main" >
