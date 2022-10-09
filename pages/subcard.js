@@ -1,6 +1,9 @@
 import styles from '../styles/Home.module.css';
 import ReactMarkdown from 'react-markdown';
 import React from 'react';
+import Image from 'next/image';
+
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function SubcardCard(props) {
     let body;
@@ -10,23 +13,14 @@ export default function SubcardCard(props) {
         
         body = items.map( item => {
             if (type === 'list-link' || type === 'list-link-horizontal') {
-                /*console.info("url",item?.ico ? `../public/${item.ico}.svg` : '')
-                const img = <img
-                                src={item?.ico ? `../public/${item.ico}.svg` : ''}
-                                
-                            />
-                const styleIco = {
-                    before: {
-                        content: img
-                    }
-                }*/
+                const img = item?.ico ? <Image src={ `${prefix}/${item?.ico}.svg`} width={16} height={16}/> : '';
+
                 return <a 
                         key={`list-link-${item.id}`}
-                        //styles={styleIco}
-                        className={`${item?.ico ? styles[item.ico] : ''} ${styles[type]}`}
-                        //className={styles[type]}
+                        className={`${styles[type]}`}
                         rel="noreferrer" href={item.url}
                         target="_blank">
+                            {img}
                             <ReactMarkdown components={{p: React.Fragment}}>{item.name}</ReactMarkdown>
                         </a>
             }
