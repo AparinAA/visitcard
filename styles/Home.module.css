@@ -242,12 +242,13 @@
   left: -3px;
 }
 
+
 .telegram::before {
-  content: url('../public/send-fill.svg');
+  content: url('../public/telegram.svg');
 }
 
 .email::before {
-  content: url('../public/envelope-fill.svg');
+  content: url('../public/email.svg');
 }
 
 .github::before {
@@ -255,7 +256,7 @@
 }
 
 .spread::before {
-  content: url('../public/icospread.svg');
+  content: url('../public/spread.svg');
 }
 
 .iexpert::before {
@@ -266,6 +267,6 @@
   content: url('../public/npm.svg');
 }
 
-.npm::before {
-  content: url('../public/npm.svg');
+.exchange::before {
+  content: url('../public/exchange.svg');
 }

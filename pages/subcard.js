@@ -7,11 +7,24 @@ export default function SubcardCard(props) {
     if (props?.body) {
         const {type, items} = props.body;
         
+        
         body = items.map( item => {
             if (type === 'list-link' || type === 'list-link-horizontal') {
+                /*console.info("url",item?.ico ? `../public/${item.ico}.svg` : '')
+                const img = <img
+                                src={item?.ico ? `../public/${item.ico}.svg` : ''}
+                                
+                            />
+                const styleIco = {
+                    before: {
+                        content: img
+                    }
+                }*/
                 return <a 
                         key={`list-link-${item.id}`}
+                        //styles={styleIco}
                         className={`${item?.ico ? styles[item.ico] : ''} ${styles[type]}`}
+                        //className={styles[type]}
                         rel="noreferrer" href={item.url}
                         target="_blank">
                             <ReactMarkdown components={{p: React.Fragment}}>{item.name}</ReactMarkdown>
