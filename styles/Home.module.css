@@ -265,3 +265,7 @@
 .npm::before {
   content: url('../public/npm.svg');
 }
+
+.npm::before {
+  content: url('../public/npm.svg');
+}
