@@ -152,6 +152,12 @@
                             "name": " npm packages",
                             "url": "https://www.npmjs.com/~x6p",
                             "ico": "npm"
+                        },
+                        {
+                            "id": 5,
+                            "name": " Exchange",
+                            "url": "https://aparinaa.github.io/coronaCheck/",
+                            "ico": "exchange"
                         }
                     ]
                 }
