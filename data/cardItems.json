@@ -156,7 +156,7 @@
                         {
                             "id": 5,
                             "name": " Exchange KoronaPay",
-                            "url": "https://aparinaa.github.io/coronaCheck/",
+                            "url": "https://coronacheck.vercel.app",
                             "ico": "exchange"
                         }
                     ]
