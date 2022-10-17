@@ -155,7 +155,7 @@
                         },
                         {
                             "id": 5,
-                            "name": " Exchange KoronaPay",
+                            "name": " Calculator KoronaPay",
                             "url": "https://coronacheck.vercel.app",
                             "ico": "exchange"
                         }
