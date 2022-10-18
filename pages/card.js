@@ -11,7 +11,9 @@ export default function Card(props) {
     return (
         <div className={styles.card} ref={ref}>
             <h2 className={inView ? styles.sticky : ''}>{props.title}</h2>            
-            {props?.children}
+            <div className={styles.cardBody}>
+                {props?.children}
+            </div>
         </div>
         
     );
