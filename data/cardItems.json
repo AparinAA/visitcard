@@ -158,6 +158,12 @@
                             "name": " Calculator KoronaPay",
                             "url": "https://coronacheck.vercel.app",
                             "ico": "exchange"
+                        },
+                        {
+                            "id": 6,
+                            "name": " LeetCode profile",
+                            "url": "https://leetcode.com/AparinAA/",
+                            "ico": "leetcode"
                         }
                     ]
                 }
