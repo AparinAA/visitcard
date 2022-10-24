@@ -1,3 +1,3 @@
 ### Visit card Next.js
 
-[Click](https://aparinaa.github.io/visitcard/)
+[Click for go to site](https://aparinaa.github.io/visitcard/)
