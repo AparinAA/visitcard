@@ -80,7 +80,7 @@
                 "id": 1,
                 "child": {
                     "type": "list-horizontal",
-                    "items": ["Python", "Django", "JavaScript", "TypeScript", "React.js", "Next.js", "Git", "TeX"]
+                    "items": ["Python", "Django", "JavaScript", "TypeScript", "React.js", "Next.js", "Git", "SQL", "TeX"]
                 }
             }
         ]
