@@ -20,6 +20,12 @@
                                 "name": " alxaparin@gmail.com",
                                 "url": "mailto:alxaparin@mgail.com",
                                 "ico": "email"
+                            },
+                            {
+                                "id": 3,
+                                "name": " Linkedin",
+                                "url": "https://www.linkedin.com/in/aleksandr-aparin-707917215",
+                                "ico": "linkedin"
                             }
                         ]
                     }
