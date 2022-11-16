@@ -1,7 +1,6 @@
 import { useInView } from 'react-intersection-observer';
 
 import Head from 'next/head';
-import Image from 'next/image';
 //import Script from 'next/script';
 import styles from '../styles/Home.module.css';
 import Card from './card';
@@ -58,7 +57,7 @@ export default function Home ({listCard}) {
                     
                 </div>
                 <footer className={styles.footer}>
-                    Powered by{' '} X6P
+                    Powered by{' '} Aparin Aleksandr
                 </footer>
             </main>
 
