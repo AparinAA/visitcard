@@ -9,6 +9,7 @@ const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export default function SubcardCard(props) {
 
     let body;
+    let add;
     if (props?.body) {
         const {type, items, addition } = props.body;
         const additionData = props?.addition;
@@ -56,7 +57,7 @@ export default function SubcardCard(props) {
                 addCol = <div className={styles.withAdditionPie}>
                     <ul style={{'alignSelf': 'center'}}>
                         {COLORS.map( (color, i) => {
-                            return <li key={color}>
+                            return <li key={color} style={{'listStyle': 'none', "width": "max-content"}}>
                                 <div style={{backgroundColor: color, width: 10, height: 10, display: 'inline-block'}} /> {data[i].name}
                             </li>
                         })}
@@ -83,12 +84,9 @@ export default function SubcardCard(props) {
                 </div>
                 
             }
-            body = <div className={styles.withAddition}>
-                {body}
-                <div>
-                    <h4 style={{textAlign: 'center'}}>Leetcode stats</h4>
-                    {addCol}
-                </div>
+            add = <div>
+                <h4 style={{textAlign: 'center'}}>Leetcode stats</h4>
+                {addCol}
             </div>
         }
     }
@@ -97,11 +95,18 @@ export default function SubcardCard(props) {
 
     return (
         <div className={styles.subcard}>
-            <p>{props?.title}</p>
-            {props?.description ? <span>{props?.description}</span> : ''}
-            {props?.subdescription ? <small><span>{props?.subdescription}</span></small> : ''}
-            {body}
-            {props?.children}
+            <div className={styles.withAddition}>
+                <div>
+                    <p>{props?.title}</p>
+                    {props?.description ? <span>{props?.description}</span> : ''}
+                    {props?.subdescription ? <small><span>{props?.subdescription}</span></small> : ''}
+                    {body}
+                    {props?.children}
+                </div>
+                <div>
+                    {add}
+                </div>
+            </div>
         </div>
     );
 }
