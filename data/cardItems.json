@@ -26,12 +26,18 @@
                                 "name": " Linkedin",
                                 "url": "https://www.linkedin.com/in/aleksandr-aparin-707917215",
                                 "ico": "linkedin"
+                            },
+                            {
+                                "id": 4,
+                                "name": " LeetCode Profile",
+                                "url": "https://leetcode.com/AparinAA/",
+                                "ico": "leetcode"
                             }
-                        ]
+                        ],
+                        "addition": "leetcodestat"
                     }
             }
         ]
-        
     },
     {
         "id": 5,
@@ -164,12 +170,6 @@
                             "name": " Calculator KoronaPay",
                             "url": "https://coronacheck.vercel.app",
                             "ico": "exchange"
-                        },
-                        {
-                            "id": 6,
-                            "name": " LeetCode Profile",
-                            "url": "https://leetcode.com/AparinAA/",
-                            "ico": "leetcode"
                         }
                     ]
                 }

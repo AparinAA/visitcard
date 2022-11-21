@@ -13,6 +13,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap-icons": "^1.8.3",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
     "gray-matter": "^4.0.3",
     "html-react-parser": "^3.0.4",
     "mysql": "^2.18.1",
@@ -22,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.0",
     "react-markdown": "^8.0.3",
+    "recharts": "^2.1.16",
     "remark-gfm": "^3.0.1",
     "xmldom": "^0.6.0"
   },

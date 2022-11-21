@@ -1,10 +1,11 @@
 import { useInView } from 'react-intersection-observer';
+import { useState, useEffect } from 'react';
 
 import Head from 'next/head';
 //import Script from 'next/script';
 import styles from '../styles/Home.module.css';
-import Card from './card';
-import SubcardCard from './subcard';
+import Card from '../component/card';
+import SubcardCard from '../component/subcard';
 import { readData } from '../data/read';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -13,6 +14,14 @@ export default function Home ({listCard}) {
     const num = 100;
     const rate = 1 / (num + 1);
 
+    let [ addition, setAddition ] = useState([]);
+    useEffect( () => {
+        fetch('api/leetcodequery', { method: "GET" })
+        .then(res => res.json())
+        .then(d => setAddition({"name": "leetcodestat", "data": d}))
+        .catch( e => console.info("E", e));
+    }, []);
+    
     const [ref, inView, entry] = useInView({
         /* Optional options */
         root: null,
@@ -48,6 +57,7 @@ export default function Home ({listCard}) {
                                         description={infItem?.description}
                                         subdescription={infItem?.subdescription}
                                         body={infItem?.child}
+                                        addition={infItem?.child?.addition ? addition : undefined}
                                     />
                                 })}
                                 {item?.child}
