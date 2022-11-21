@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css';
 import ReactMarkdown from 'react-markdown';
 import React from 'react';
 import Image from 'next/image';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import LeetCodeStat from './leetcodestat';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -39,50 +39,7 @@ export default function SubcardCard(props) {
             let addCol = "...Loading";
             if ( additionData?.name === 'leetcodestat' ) {
                 const data = additionData?.data?.data?.filter( item => item.name !== "All");
-                
-                const COLORS = ['#00C49F', 'rgb(255,184,0)', 'rgb(255,45,85)'];
-                const RADIAN = Math.PI / 180;
-
-                const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, value, index }) => {
-                    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-                    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-                    return (
-                      <text x={x} y={y} fill="black" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-                        {value}
-                      </text>
-                    );
-                };
-                
-                addCol = <div className={styles.withAdditionPie}>
-                    <ul style={{'alignSelf': 'center'}}>
-                        {COLORS.map( (color, i) => {
-                            return <li key={color} style={{'listStyle': 'none', "width": "max-content"}}>
-                                <div style={{backgroundColor: color, width: 10, height: 10, display: 'inline-block'}} /> {data[i].name}
-                            </li>
-                        })}
-                    </ul>
-                    <div >
-                        <PieChart width={140} height={140}>
-                            <Pie
-                                data={data}
-                                cx="50%"
-                                cy="50%"
-                                labelLine={false}
-                                label={renderCustomizedLabel}
-                                isAnimationActive={false}
-                                outerRadius={60}
-                                fill="#8884d8"
-                                dataKey="value"
-                            >
-                                {data.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                ))}
-                            </Pie>
-                        </PieChart>
-                    </div>
-                </div>
-                
+                addCol = <LeetCodeStat data={data} />
             }
             add = <div>
                 <h4 style={{textAlign: 'center'}}>Leetcode stats</h4>
@@ -90,8 +47,6 @@ export default function SubcardCard(props) {
             </div>
         }
     }
-
-    
 
     return (
         <div className={styles.subcard}>
