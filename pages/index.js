@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 
 import Head from 'next/head';
 //import Script from 'next/script';
@@ -10,7 +10,7 @@ import { readData } from '../data/read';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-export default function Home ({listCard}) {
+function Home ({listCard}) {
     const num = 100;
     const rate = 1 / (num + 1);
 
@@ -74,6 +74,8 @@ export default function Home ({listCard}) {
         </div>
     )
 }
+
+export default React.memo(Home);
 
 export async function getStaticProps() {
     const data = readData(prefix);

@@ -6,7 +6,7 @@ import LeetCodeStat from './leetcodestat';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-export default function SubcardCard(props) {
+function SubcardCard(props) {
 
     let body;
     let add;
@@ -65,3 +65,5 @@ export default function SubcardCard(props) {
         </div>
     );
 }
+
+export default React.memo(SubcardCard)
