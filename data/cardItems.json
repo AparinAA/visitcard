@@ -109,15 +109,15 @@
                 "child": {
                     "type": "list-list",
                     "items": [
-                        "Personnel management",
-                        "Generation pivot table",
+                        "Manager",
+                        "Create a pivot tables",
                         "Analysis of various data"
                     ]
                 }           
             },
             {
                 "id": 2,
-                "title": "Data analyst, task management and coordination",
+                "title": "Data analyst, Web-developer, task management and coordination",
                 "description": "National Research University Higher School of Economics",
                 "subdescription": "Oct. 2019 - Jun. 2022",
                 "child": {
