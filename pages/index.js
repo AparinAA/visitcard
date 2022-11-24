@@ -15,6 +15,7 @@ function Home ({listCard}) {
     const rate = 1 / (num + 1);
 
     let [ addition, setAddition ] = useState([]);
+
     useEffect( () => {
         fetch('api/leetcodequery', { method: "GET" })
         .then(res => res.json())
@@ -42,12 +43,12 @@ function Home ({listCard}) {
                 className={styles.title}
                 id="title"
                 ref={ref}
-                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
+                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
             />
             
             <main className={styles.main} id="main" >
                 <div className={styles.grid}>
-                    <div className={styles.info} id="info" style={{"opacity":  1 - 1.2 * ratio }}>
+                    <div className={styles.info} id="info" style={{"opacity":  1 - 1.2 * ratio * ratio }}>
                         {listCard?.map( item => (
                             <Card title={item?.title} key={`card_${item.id}`}>
                                 {item.info.map( infItem => {
