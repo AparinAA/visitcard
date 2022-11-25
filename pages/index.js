@@ -14,15 +14,6 @@ function Home ({listCard}) {
     const num = 100;
     const rate = 1 / (num + 1);
 
-    let [ addition, setAddition ] = useState([]);
-
-    useEffect( () => {
-        fetch('api/leetcodequery', { method: "GET" })
-        .then(res => res.json())
-        .then(d => setAddition({"name": "leetcodestat", "data": d}))
-        .catch( e => console.info("E", e));
-    }, []);
-    
     const [ref, inView, entry] = useInView({
         /* Optional options */
         root: null,
@@ -58,7 +49,6 @@ function Home ({listCard}) {
                                         description={infItem?.description}
                                         subdescription={infItem?.subdescription}
                                         body={infItem?.child}
-                                        addition={infItem?.child?.addition ? addition : undefined}
                                     />
                                 })}
                                 {item?.child}
