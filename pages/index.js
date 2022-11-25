@@ -1,16 +1,24 @@
 import { useInView } from 'react-intersection-observer';
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect, memo, useReducer } from 'react';
 
 import Head from 'next/head';
 //import Script from 'next/script';
 import styles from '../styles/Home.module.css';
 import Card from '../component/card';
 import SubcardCard from '../component/subcard';
+import ChangeLang from '../component/ChangeLang';
+
 import { readData } from '../data/read';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-function Home ({listCard}) {
+let initLang = "EN";
+
+function reducer (state, action) {
+    return action;
+}
+
+function Home ({data}) {
     const num = 100;
     const rate = 1 / (num + 1);
 
@@ -21,6 +29,8 @@ function Home ({listCard}) {
         threshold: [...Array(num).keys()].map( index => (index + 1) * rate),
     });
 
+    const [lang, setLang] = useReducer(reducer, initLang);
+    const listCard = data[lang];
     const ratio = entry?.intersectionRatio ?? 1;
     return (
         <div className={styles.container} id="body">
@@ -37,9 +47,11 @@ function Home ({listCard}) {
                 style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
             />
             
-            <main className={styles.main} id="main" >
+            <main className={styles.main} id="main" style={{"opacity":  1 - 1.2 * ratio * ratio }}>
+                <ChangeLang inView={!inView} changeLang={setLang} lang={lang}/>
+
                 <div className={styles.grid}>
-                    <div className={styles.info} id="info" style={{"opacity":  1 - 1.2 * ratio * ratio }}>
+                    <div className={styles.info} id="info">
                         {listCard?.map( item => (
                             <Card title={item?.title} key={`card_${item.id}`}>
                                 {item.info.map( infItem => {
@@ -71,8 +83,6 @@ export default React.memo(Home);
 export async function getStaticProps() {
     const data = readData(prefix);
     return {
-        props: {
-            listCard: data
-        }
+        props: {data}
     }
 }
