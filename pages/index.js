@@ -12,7 +12,7 @@ import { readData } from '../data/read';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-let initLang = "EN";
+let initLang = "RU";
 
 function reducer (state, action) {
     return action;
@@ -48,7 +48,7 @@ function Home ({data}) {
             />
             
             <main className={styles.main} id="main" style={{"opacity":  1 - 1.2 * ratio * ratio }}>
-                <ChangeLang inView={!inView} changeLang={setLang} lang={lang}/>
+                <ChangeLang props={{prefix, inView, setLang, lang}}/>
 
                 <div className={styles.grid}>
                     <div className={styles.info} id="info">
