@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import React, { useState, useEffect, memo, useReducer } from 'react';
+import React, {useEffect, useReducer } from 'react';
 
 import Head from 'next/head';
 //import Script from 'next/script';
@@ -7,14 +7,20 @@ import styles from '../styles/Home.module.css';
 import Card from '../component/card';
 import SubcardCard from '../component/subcard';
 import ChangeLang from '../component/ChangeLang';
+import Image from 'next/image';
 
 import { readData } from '../data/read';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-let initLang = "RU";
-
 function reducer (state, action) {
+    const lang = action;
+    if ( /ru/ig.test(lang) ) {
+        return "RU";
+    }
+    if ( /en/ig.test(lang) ) {
+        return "EN";
+    }
     return action;
 }
 
@@ -22,6 +28,11 @@ function Home ({data}) {
     const num = 100;
     const rate = 1 / (num + 1);
 
+    useEffect( () => {
+        setLang(window.navigator.language);
+    }, []);
+
+    
     const [ref, inView, entry] = useInView({
         /* Optional options */
         root: null,
@@ -29,9 +40,10 @@ function Home ({data}) {
         threshold: [...Array(num).keys()].map( index => (index + 1) * rate),
     });
 
-    const [lang, setLang] = useReducer(reducer, initLang);
+    const [lang, setLang] = useReducer(reducer, "EN");
     const listCard = data[lang];
     const ratio = entry?.intersectionRatio ?? 1;
+
     return (
         <div className={styles.container} id="body">
             <Head>
@@ -44,12 +56,11 @@ function Home ({data}) {
                 className={styles.title}
                 id="title"
                 ref={ref}
-                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage : `url(${prefix}/welcomtextMini.svg)`}}
+                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1 , backgroundImage : `url(${prefix}/welcomtextMini.svg)`}} 
             />
-            
             <main className={styles.main} id="main" style={{"opacity":  1 - 1.2 * ratio * ratio }}>
-                <ChangeLang props={{prefix, inView, setLang, lang}}/>
 
+                <ChangeLang props={{prefix, inView, setLang, lang}}/>
                 <div className={styles.grid}>
                     <div className={styles.info} id="info">
                         {listCard?.map( item => (

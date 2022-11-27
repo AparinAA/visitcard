@@ -216,7 +216,6 @@
   }
   
   .info {
-    height: 102vh;
     max-width: 2700px;
   }
 
@@ -271,7 +270,7 @@
   justify-content: flex-end;
   align-content: flex-end;
   padding: 3px;
-  margin: 5px;
+  margin-right: 25px;
   width: 100%;
   max-width: 1000px;
   text-align: right;
@@ -285,7 +284,7 @@
 
 .labelButtonLang {
   padding: 5px;
-  margin-right: 10px;
+  margin: 5px;
   background-color: rgb(233, 233, 233);
   border-radius: 5px;
   display: flex;
