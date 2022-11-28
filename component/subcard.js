@@ -27,24 +27,29 @@ function SubcardCard(props) {
         
     }
 
-    return (
-        <div className={styles.subcard}>
-            <div className={styles.withAddition}>
-                <div>
+    const main = <div>
                     <p>{props?.title}</p>
                     {props?.description ? <span>{props?.description}</span> : ''}
                     {props?.subdescription ? <small><span>{props?.subdescription}</span></small> : ''}
                     {body}
                     {props?.children}
-                </div>
-                {
-                    addition === 'leetcodestat' &&
-                    <div>
-                        <h4 style={{textAlign: 'center'}}>Leetcode stats</h4>
-                        <LeetCodeStat />
-                    </div>
-                } 
-            </div>
+                </div>;
+
+    addition === 'leetcodestat' 
+    return (
+        <div className={styles.subcard}>
+            
+            {addition ?
+                <div className={styles.withAddition}>
+                    { main }    
+                    { addition === 'leetcodestat' && <div>
+                            <h4 style={{textAlign: 'center'}}>Leetcode stats</h4>
+                            <LeetCodeStat />
+                        </div>
+                    }
+                </div>  
+                : main 
+            } 
         </div>
     );
 }

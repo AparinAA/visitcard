@@ -84,6 +84,7 @@
   justify-content: center;
 }
 
+
 .card {
   padding: 7px 10px;
   margin: 5px 15px;
@@ -201,21 +202,35 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+
+@media (min-width: 900px) and (max-width: 2130px) {
+  .info {
+    padding: 0;
+    margin: 0;;
+    width: 92vw;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto;
+  }
+  
+  .info > div:first-child {
+    grid-row-end: span 100;
   }
 }
 
-
-
-@media (min-height: 1100px) and (min-width: 1200px) {
+@media (min-height: 1500px) and (min-width: 2130px) {
+  
   .title {
     background-size: 50%;
   }
   
   .info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     max-width: 2700px;
   }
 
@@ -248,15 +263,23 @@
 }
 
 .withAddition {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.withAddition > div:nth-child(2n) {
+  justify-self: center;
+  
 }
 
 @media (max-width: 570px) {
-  .withAddition {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .card {
+    margin: 5px 0;
+    padding: 7px 12px;
   }
 }
 

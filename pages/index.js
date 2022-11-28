@@ -44,24 +44,26 @@ function Home ({data}) {
     const listCard = data[lang];
     const ratio = entry?.intersectionRatio ?? 1;
 
-    const gridCards = <div className={styles.grid}>
-                        <div className={styles.info} id="info">
-                            {listCard?.map( item => (
-                                <Card title={item?.title} key={`card_${item.id}`}>
-                                    {item.info.map( infItem => {
-                                        return <SubcardCard 
-                                            key={`subcard_${item.id}_${infItem?.id}`}
-                                            title={infItem?.title}
-                                            description={infItem?.description}
-                                            subdescription={infItem?.subdescription}
-                                            body={infItem?.child}
-                                        />
-                                    })}
-                                    {item?.child}
-                                </Card>
-                            ))}
-                        </div>
+    const typeGrid = 'info'//'mainGrid';
+
+    const gridCards = 
+                    <div className={styles[typeGrid]} id="info">
+                        {listCard?.map( item => (
+                            <Card title={item?.title} key={`card_${item.id}`}>
+                                {item.info.map( infItem => {
+                                    return <SubcardCard 
+                                        key={`subcard_${item.id}_${infItem?.id}`}
+                                        title={infItem?.title}
+                                        description={infItem?.description}
+                                        subdescription={infItem?.subdescription}
+                                        body={infItem?.child}
+                                    />
+                                })}
+                                {item?.child}
+                            </Card>
+                        ))}
                     </div>
+                    
     return (
         <div className={styles.container} id="body">
             <Head>
