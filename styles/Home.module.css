@@ -211,6 +211,7 @@
     display: grid;
     grid-template-columns: 300px auto;
     grid-template-rows: auto;
+    grid-column-gap: 10px;
   }
   
   .info > div:first-child {
