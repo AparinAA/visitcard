@@ -226,6 +226,10 @@
   opacity: 1;
 }
 
+.progressbar:hover > div {
+  opacity: 0;
+}
+
 .list-link-horizontal:hover {
   background-color: rgb(236, 236, 236);
 }
