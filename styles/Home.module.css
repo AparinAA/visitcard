@@ -180,9 +180,11 @@
   margin: 0 !important;
 }
 
-.list-horizontal > li {
+.list-horizontal > .list-hor-name-item {
   position: relative;
   display: inline-block;
+  width: 100px;
+  text-align: center;
   box-sizing: border-box;
   list-style-type: none;
   margin: 5px 5px 0 0 !important;

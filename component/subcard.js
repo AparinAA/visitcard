@@ -1,9 +1,9 @@
 import styles from '../styles/Home.module.css';
 import ReactMarkdown from 'react-markdown';
-import React, { useState, useEffect, useReducer } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import LeetCodeStat from './leetcodestat';
 import ListLink from './subcardtypes/ListLink';
+import ListItemHorizontal from './subcardtypes/ListItemHorizontal';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -19,7 +19,7 @@ function SubcardCard(props) {
             if (type === 'list-horizontal' || type === 'list-list') {
                 const typedef = typeof item;
                 if ( typedef === 'object' ) {
-                    return <li key={`list-hor-${index}`}><ReactMarkdown components={{p: React.Fragment}}>{""+Object.keys(item)[0]}</ReactMarkdown></li>
+                    return <ListItemHorizontal key={`list-hor-${index}`} item={item}/>
                 } else if ( ['string', 'number', 'boolean'].includes(typedef) ) {
                     return <li key={`list-hor-${index}`}><ReactMarkdown components={{p: React.Fragment}}>{item}</ReactMarkdown></li>
                 }
