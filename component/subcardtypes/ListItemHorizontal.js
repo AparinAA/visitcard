@@ -11,12 +11,11 @@ function ListItemHorizontal(props) {
     }
     return (
         <li>
-            <div className='list-hor-name-item'>
+            
                 <ReactMarkdown components={{p: React.Fragment}}>
                     {name}
                 </ReactMarkdown>
-            </div>
-            {lvl}
+            
         </li>
     );
 }
