@@ -17,7 +17,12 @@ function SubcardCard(props) {
                 return <ListLink key={`list-link-${item.id}`} data={{prefix, type, item}} />
             }
             if (type === 'list-horizontal' || type === 'list-list') {
-                return <li key={`list-hor-${index}`}><ReactMarkdown components={{p: React.Fragment}}>{item}</ReactMarkdown></li>
+                const typedef = typeof item;
+                if ( typedef === 'object' ) {
+                    return <li key={`list-hor-${index}`}><ReactMarkdown components={{p: React.Fragment}}>{""+Object.keys(item)[0]}</ReactMarkdown></li>
+                } else if ( ['string', 'number', 'boolean'].includes(typedef) ) {
+                    return <li key={`list-hor-${index}`}><ReactMarkdown components={{p: React.Fragment}}>{item}</ReactMarkdown></li>
+                }
             }
             
             return <ReactMarkdown key={index}>{item}</ReactMarkdown>;

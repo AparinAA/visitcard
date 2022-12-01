@@ -92,7 +92,7 @@
                 "id": 1,
                 "child": {
                     "type": "list-horizontal",
-                    "items": ["Python", "Django", "JavaScript", "TypeScript", "React.js", "Next.js", "Git", "SQL", "TeX"]
+                    "items": [ {"Python": 5}, {"Django": 3}, {"JavaScript": 3}, {"TypeScript": 1}, {"React.js": 1}, {"Next.js": 1}, {"HTML/CSS": 3}, {"Git": 5}, {"SQL": 3}, {"TeX": 6}]
                 }
             }
         ]
