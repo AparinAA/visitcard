@@ -213,11 +213,12 @@
 .progressbar > span {
   position: absolute;
   z-index: 10;
-  left: 5px;
-  top: 30px;
+  left: 50%;
+  top: 28px;
   width: max-content;
   color: black;
   opacity: 0;
+  transform: translate(-50%);
   transition: all .3s;
 }
 
@@ -226,7 +227,7 @@
   opacity: 1;
 }
 
-.progressbar:hover > div {
+.progressbar:hover > .bar {
   opacity: 0;
 }
 
