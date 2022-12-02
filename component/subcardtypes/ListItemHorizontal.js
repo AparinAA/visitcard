@@ -22,7 +22,7 @@ function ListItemHorizontal(props) {
             </div>
             <div className={styles.progressbar}>
                 {lvl}
-                <span>{exp > 5 ? '5+ experience' : `${exp} experience`}</span>
+                <span>{exp > 5 ? '5+ years' : (exp > 1 ? `${exp} years` : `${exp} year`)}</span>
             </div>
             
         </li>
