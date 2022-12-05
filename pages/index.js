@@ -7,7 +7,6 @@ import styles from '../styles/Home.module.css';
 import Card from '../component/card';
 import SubcardCard from '../component/subcard';
 import ChangeLang from '../component/ChangeLang';
-import Image from 'next/image';
 
 import { readData } from '../data/read';
 
