@@ -7,35 +7,35 @@
                 "id": 1,
                 "title": "Aleksandr Aparin (mathematician, developer)",
                 "child": {
-                        "type": "list-link",
-                        "items": [
-                            {
-                                "id": 1,
-                                "name": " @alxaparin",
-                                "url": "https://t.me/alxaparin",
-                                "ico": "telegram"
-                            },
-                            {
-                                "id": 2,
-                                "name": " alxaparin@gmail.com",
-                                "url": "mailto:alxaparin@mgail.com",
-                                "ico": "email"
-                            },
-                            {
-                                "id": 3,
-                                "name": " Linkedin",
-                                "url": "https://www.linkedin.com/in/aleksandr-aparin-707917215",
-                                "ico": "linkedin"
-                            },
-                            {
-                                "id": 4,
-                                "name": " LeetCode Profile",
-                                "url": "https://leetcode.com/AparinAA/",
-                                "ico": "leetcode"
-                            }
-                        ],
-                        "addition": "leetcodestat"
-                    }
+                    "type": "list-link",
+                    "items": [
+                        {
+                            "id": 1,
+                            "name": " @alxaparin",
+                            "url": "https://t.me/alxaparin",
+                            "ico": "telegram"
+                        },
+                        {
+                            "id": 2,
+                            "name": " alxaparin@gmail.com",
+                            "url": "mailto:alxaparin@mgail.com",
+                            "ico": "email"
+                        },
+                        {
+                            "id": 3,
+                            "name": " Linkedin",
+                            "url": "https://www.linkedin.com/in/aleksandr-aparin-707917215",
+                            "ico": "linkedin"
+                        },
+                        {
+                            "id": 4,
+                            "name": " LeetCode Profile",
+                            "url": "https://leetcode.com/AparinAA/",
+                            "ico": "leetcode"
+                        }
+                    ],
+                    "addition": "leetcodestat"
+                }
             }
         ]
     },
@@ -92,7 +92,38 @@
                 "id": 1,
                 "child": {
                     "type": "list-horizontal",
-                    "items": [ {"Python": 5}, {"Django": 3}, {"JavaScript": 3}, {"TypeScript": 1}, {"React.js": 1}, {"Next.js": 1}, {"HTML/CSS": 3}, {"Git": 5}, {"SQL": 3}, {"TeX": 6}]
+                    "items": [
+                        {
+                            "Python": 5
+                        },
+                        {
+                            "Django": 3
+                        },
+                        {
+                            "JavaScript": 3
+                        },
+                        {
+                            "TypeScript": 1
+                        },
+                        {
+                            "React.js": 1
+                        },
+                        {
+                            "Next.js": 1
+                        },
+                        {
+                            "HTML/CSS": 3
+                        },
+                        {
+                            "Git": 5
+                        },
+                        {
+                            "SQL": 3
+                        },
+                        {
+                            "TeX": 6
+                        }
+                    ]
                 }
             }
         ]
@@ -102,10 +133,10 @@
         "title": "Work experience",
         "info": [
             {
-                "id": 1,
+                "id": 3,
                 "title": "Main deputy chief",
                 "description": "Lomonosov Moscow State University (MSU). Department Admissions Committee and work with matriculant",
-                "subdescription": "Feb. 2016 - Oct. 2019",
+                "subdescription": "February 2016 - October 2019",
                 "child": {
                     "type": "list-list",
                     "items": [
@@ -116,13 +147,13 @@
                         "Automatized proccess finding/recognition a paperworks of participant competitions and matriculant exams using *FPDF* and *OpenCV* libs in *Python*",
                         "Analysised rating among participant"
                     ]
-                }           
+                }
             },
             {
-                "id": 2,
+                "id": 1,
                 "title": "Data analyst, task management and coordination",
                 "description": "National Research University Higher School of Economics (HSE)",
-                "subdescription": "Oct. 2019 - Jun. 2022",
+                "subdescription": "October 2019 - June 2022",
                 "child": {
                     "type": "list-list",
                     "items": [
@@ -134,10 +165,10 @@
                 }
             },
             {
-                "id": 3,
+                "id": 2,
                 "title": "Data analyst, Web-developer, task management and coordination",
                 "description": "Association of Organizers of student competitions «Я - профессионал»",
-                "subdescription": "Oct. 2019 - Jun. 2022",
+                "subdescription": "January. 2021 - June 2022",
                 "child": {
                     "type": "list-list",
                     "items": [
@@ -148,7 +179,6 @@
                     ]
                 }
             }
-            
         ]
     },
     {
@@ -194,7 +224,7 @@
                 }
             }
         ]
-    },        
+    },
     {
         "id": 7,
         "title": "Hobbies",
@@ -204,7 +234,7 @@
                 "child": {
                     "type": "text",
                     "items": [
-                        "Finance", 
+                        "Finance",
                         "Crypto/Cryptocurrency"
                     ]
                 }

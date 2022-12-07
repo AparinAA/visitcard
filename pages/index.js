@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import React, {useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 
 import Head from 'next/head';
 //import Script from 'next/script';
@@ -12,31 +12,31 @@ import { readData } from '../data/read';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-function reducer (state, action) {
+function reducer(state, action) {
     const lang = action;
-    if ( /ru/ig.test(lang) ) {
+    if (/ru/ig.test(lang)) {
         return "RU";
     }
-    if ( /en/ig.test(lang) ) {
+    if (/en/ig.test(lang)) {
         return "EN";
     }
     return action;
 }
 
-function Home ({data}) {
+function Home({ data }) {
     const num = 100;
     const rate = 1 / (num + 1);
 
-    useEffect( () => {
+    useEffect(() => {
         setLang(window.navigator.language);
     }, []);
 
-    
+
     const [ref, inView, entry] = useInView({
         /* Optional options */
         root: null,
         rootMargin: '100px',
-        threshold: [...Array(num).keys()].map( index => (index + 1) * rate),
+        threshold: [...Array(num).keys()].map(index => (index + 1) * rate),
     });
 
     const [lang, setLang] = useReducer(reducer, "EN");
@@ -45,24 +45,27 @@ function Home ({data}) {
 
     const typeGrid = 'info'//'mainGrid';
 
-    const gridCards = 
-                    <div className={styles[typeGrid]} id="info">
-                        {listCard?.map( item => (
-                            <Card title={item?.title} key={`card_${item.id}`}>
-                                {item.info.map( infItem => {
-                                    return <SubcardCard 
-                                        key={`subcard_${item.id}_${infItem?.id}`}
-                                        title={infItem?.title}
-                                        description={infItem?.description}
-                                        subdescription={infItem?.subdescription}
-                                        body={infItem?.child}
-                                    />
-                                })}
-                                {item?.child}
-                            </Card>
-                        ))}
-                    </div>
-                    
+    const gridCards =
+        <div className={styles[typeGrid]} id="info">
+            {listCard?.map(item => {
+                item.info.sort((a, b) => a?.id && b?.id ? a?.id - b?.id : 1);
+                return <Card title={item?.title} key={`card_${item.id}`}>
+                    {item.info.map(infItem => {
+                        return <SubcardCard
+                            key={`subcard_${item.id}_${infItem?.id}`}
+                            title={infItem?.title}
+                            description={infItem?.description}
+                            subdescription={infItem?.subdescription}
+                            body={infItem?.child}
+                        />
+                    })}
+                    {item?.child}
+                </Card>
+            }
+
+            )}
+        </div>
+
     return (
         <div className={styles.container} id="body">
             <Head>
@@ -70,16 +73,16 @@ function Home ({data}) {
                 <meta name="description" content="" />
                 <link rel="icon" href={`${prefix}/aa.ico`} />
             </Head>
-            
-            <div 
+
+            <div
                 className={styles.title}
                 id="title"
                 ref={ref}
-                style={{'opacity' : ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1 , backgroundImage : `url(${prefix}/welcomtextMini.svg)`}} 
+                style={{ 'opacity': ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage: `url(${prefix}/welcomtextMini.svg)` }}
             />
-            <main className={styles.main} id="main" style={{"opacity":  1 - 1.2 * ratio * ratio }}>
+            <main className={styles.main} id="main" style={{ "opacity": 1 - 1.2 * ratio * ratio }}>
 
-                <ChangeLang props={{prefix, inView, setLang, lang}}/>
+                <ChangeLang props={{ prefix, inView, setLang, lang }} />
                 {gridCards}
                 <footer className={styles.footer}>
                     Powered by{' '} Aparin Aleksandr
@@ -95,6 +98,6 @@ export default React.memo(Home);
 export async function getStaticProps() {
     const data = readData(prefix);
     return {
-        props: {data}
+        props: { data }
     }
 }
