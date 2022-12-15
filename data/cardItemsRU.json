@@ -203,12 +203,6 @@
                             "ico": "spread"
                         },
                         {
-                            "id": 3,
-                            "name": " Я-эксперт",
-                            "url": "https://iprofi-expert.ru",
-                            "ico": "iexpert"
-                        },
-                        {
                             "id": 4,
                             "name": " npm packages",
                             "url": "https://www.npmjs.com/~x6p",
