@@ -106,7 +106,7 @@
                             "TypeScript": 1
                         },
                         {
-                            "React.js": 1
+                            "React": 1
                         },
                         {
                             "Next.js": 1
@@ -140,12 +140,12 @@
                 "child": {
                     "type": "list-list",
                     "items": [
-                        "Menagment",
+                        "Management",
                         "Organized competitions for schoolchild and matriculant exams",
                         "Filled website actual information using *HTML*",
                         "Created a report using pivot tables into *Python, Ecxel*",
-                        "Automatized proccess finding/recognition a paperworks of participant competitions and matriculant exams using *FPDF* and *OpenCV* libs in *Python*",
-                        "Analysised rating among participant"
+                        "Automatized process finding/recognition a paperworks of participant competitions and matriculant exams using *FPDF* and *OpenCV* libs in *Python*",
+                        "Analyzed rating among participant"
                     ]
                 }
             },
@@ -160,7 +160,7 @@
                         "Participated in technical creation of the largest student competition «Я - профессионал»",
                         "Created the methodological rules and taught to create contests in Yandex.Contest system, also concluded technical support, using *Python, C++*",
                         "Created and analized a report using pivot tables into *Python, Ecxel*",
-                        "Participated in admission committee at HSE Univers. Created a report using pivot tables into *Python, Ecxel*"
+                        "Participated in the admission committee at HSE Univers. Created a report using pivot tables into *Python, Ecxel*"
                     ]
                 }
             },
@@ -229,7 +229,7 @@
                     "type": "text",
                     "items": [
                         "Finance",
-                        "Crypto/Cryptocurrency"
+                        "Crypto/Cryptocurrency/Smartcontracts"
                     ]
                 }
             }
