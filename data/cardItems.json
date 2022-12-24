@@ -94,12 +94,6 @@
                     "type": "list-horizontal",
                     "items": [
                         {
-                            "Python": 5
-                        },
-                        {
-                            "Django": 3
-                        },
-                        {
                             "JavaScript": 3
                         },
                         {
@@ -113,6 +107,12 @@
                         },
                         {
                             "HTML/CSS": 3
+                        },
+                        {
+                            "Python": 5
+                        },
+                        {
+                            "Django": 3
                         },
                         {
                             "Git": 5
