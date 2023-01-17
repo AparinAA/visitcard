@@ -8,7 +8,5 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', `attachment; filename=${filename}`);
 
-    createReadStream(pathFile).pipe(res).send("priv");
-
-    res.status(200);
+    res.status(200).send(pathFile);
 }
