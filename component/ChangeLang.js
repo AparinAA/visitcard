@@ -2,36 +2,40 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 
-function ChangeLang({props}) {
-    const {prefix, inView, setLang, lang} = props;
+function ChangeLang({ props }) {
+    const { prefix, inView, setLang, lang } = props;
     return (
-        <div className={`${!inView ? styles.sticky : ''} ${styles.langMenu}`} style={{"zIndex": "100"}}>
-            
-            <input 
+        <div className={`${!inView ? styles.sticky : ''} ${styles.langMenu}`} style={{ "zIndex": "100" }}>
+            <a href={`${prefix}/api/downloadcv`} target="_blank" rel="noreferrer" className={styles.downloadCvIcon}>
+                <Image src={`${prefix}/pdfsymbol.svg`} alt="ru" width={30} height={15} />
+            </a>
+
+            <input
                 type="radio"
                 name="langRadio"
                 className={styles.buttonLang}
                 onChange={(e) => setLang(e.target.value)}
                 value="EN"
                 id="buttonEN"
-                checked={lang==="EN"}
+                checked={lang === "EN"}
             />
             <label htmlFor='buttonEN' className={styles.labelButtonLang}>
-                <Image src={`${prefix}/enflag.svg`} width={30} height={15}/>
+                <Image src={`${prefix}/enflag.svg`} alt="en" width={30} height={15} />
             </label>
-            
-            <input 
+
+            <input
                 type="radio"
                 name="langRadio"
                 className={`${styles.buttonLang} ${styles.ru}`}
-                onChange={(e) => setLang(e.target.value)} 
+                onChange={(e) => setLang(e.target.value)}
                 value="RU"
                 id="buttonRU"
-                checked={lang==="RU"}
+                checked={lang === "RU"}
             />
             <label htmlFor='buttonRU' className={styles.labelButtonLang}>
-                <Image src={`${prefix}/ruflag.svg`} width={30} height={15}/>
+                <Image src={`${prefix}/ruflag.svg`} alt="ru" width={30} height={15} />
             </label>
+
         </div>
     );
 }

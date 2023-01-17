@@ -333,7 +333,7 @@
   display: flex;
   justify-content: flex-end;
   align-content: flex-end;
-  padding: 3px;
+  padding: 10px 3px 3px 3px;
   margin-right: 25px;
   width: 100%;
   max-width: 1000px;
@@ -352,10 +352,20 @@
   background-color: rgb(233, 233, 233);
   border-radius: 5px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .labelButtonLang:hover {
   cursor: pointer;
+}
+
+.downloadCvIcon {
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(243, 170, 170);
+  border-radius: 5px;
+  display: flex;
 }
 
 .buttonLang:checked+label {
