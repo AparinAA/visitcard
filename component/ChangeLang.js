@@ -6,9 +6,12 @@ function ChangeLang({ props }) {
     const { prefix, inView, setLang, lang } = props;
     return (
         <div className={`${!inView ? styles.sticky : ''} ${styles.langMenu}`} style={{ "zIndex": "100" }}>
-            <a href={`${prefix}/Aparin_CV_RU.pdf`} target="_blank" rel="noreferrer" className={styles.downloadCvIcon}>
-                <Image src={`${prefix}/pdfsymbol.svg`} alt="ru" width={30} height={15} />
-            </a>
+            {
+                lang === "RU" &&
+                <a href={`${prefix}/Aparin_CV_RU.pdf`} target="_blank" rel="noreferrer" className={styles.downloadCvIcon}>
+                    <Image src={`${prefix}/pdfsymbol.svg`} alt="ru" width={30} height={15} />
+                </a>
+            }
 
             <input
                 type="radio"
