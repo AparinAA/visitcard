@@ -391,12 +391,12 @@
   /* background-color: rgb(168, 168, 168); */
   border-radius: 9px;
   background: rgb(102,104,106);
-  background: linear-gradient(90deg, rgba(102,104,106,1) 0%, rgb(134, 134, 134) 51%);
+  background: linear-gradient(90deg, rgb(191, 197, 206) 0%, rgb(151, 151, 151) 51%);
   background-size: 400% 400%;
-  -webkit-animation: gradient 5s ease infinite alternate;
-  -moz-animation: gradient 5s ease infinite alternate;
-  -o-animation: gradient 5s ease infinite alternate;
-  animation: gradient 5s ease infinite alternate;
+  -webkit-animation: gradient 4s ease infinite alternate;
+  -moz-animation: gradient 4s ease infinite alternate;
+  -o-animation: gradient 4s ease infinite alternate;
+  animation: gradient 4s ease infinite alternate;
 }
 
 @keyframes gradient {
