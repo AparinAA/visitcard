@@ -373,3 +373,41 @@
   background-color: #b3b3b3;
   transform: scale(1.05);
 }
+
+
+
+.skeletonLeetcode {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skeletonLeetcode > ul > li {
+  list-style-type: none;
+  width: max-content;
+  margin-right: 12px;
+}
+
+.hiddenBlock {
+  /* background-color: rgb(168, 168, 168); */
+  border-radius: 9px;
+  background: rgb(102,104,106);
+  background: linear-gradient(90deg, rgba(102,104,106,1) 0%, rgb(134, 134, 134) 51%);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 5s ease infinite alternate;
+  -moz-animation: gradient 5s ease infinite alternate;
+  -o-animation: gradient 5s ease infinite alternate;
+  animation: gradient 5s ease infinite alternate;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 80%;
+  }
+  50% {
+      background-position: 80% 0%;
+  }
+  100% {
+      background-position: 0% 80%;
+  }
+}
+

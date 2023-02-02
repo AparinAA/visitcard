@@ -80,6 +80,7 @@ function Home({ data }) {
                 ref={ref}
                 style={{ 'opacity': ratio * ratio * ratio * ratio * ratio * ratio * ratio * ratio - 0.1, backgroundImage: `url(${prefix}/welcomtextMini.svg)` }}
             />
+
             <main className={styles.main} id="main" style={{ "opacity": 1 - 1.2 * ratio * ratio }}>
 
                 <ChangeLang props={{ prefix, inView, setLang, lang }} />
