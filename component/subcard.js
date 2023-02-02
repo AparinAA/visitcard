@@ -37,7 +37,7 @@ function SubcardCard(props) {
     }
 
     const main = <div>
-        <p>{props?.title}</p>
+        <ReactMarkdown>{props?.title}</ReactMarkdown>
         {props?.description ? <span>{props?.description}</span> : ''}
         {props?.subdescription ? <small><span>{props?.subdescription}</span></small> : ''}
         {body}
