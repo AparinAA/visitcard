@@ -4,7 +4,7 @@ import { gql, GraphQLClient } from 'graphql-request';
 export default async function handler(req, res) {
     const endpoint = 'https://leetcode.com/graphql';
 
-    const query =gql`
+    const query = gql`
     { 
         matchedUser(username: "AparinAA") {
             username
@@ -21,9 +21,10 @@ export default async function handler(req, res) {
 
     const client = new GraphQLClient(endpoint, { headers: {} });
     const resp = await client.request(query);
-    
-    const data = resp.matchedUser.submitStats.acSubmissionNum.map( item => {
-        return {"name": item.difficulty, 'value': item.count}
+
+    const data = resp.matchedUser.submitStats.acSubmissionNum.map(item => {
+        return { "name": item.difficulty, 'value': item.count }
     });
-    res.status(200).json({ data })
+
+    res.status(200).json({ data });
 }
