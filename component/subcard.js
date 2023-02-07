@@ -4,7 +4,6 @@ import React from 'react';
 import LeetCodeStat from './leetcodestat';
 import ListLink from './subcardtypes/ListLink';
 import ListItemHorizontal from './subcardtypes/ListItemHorizontal';
-import { SortAlphaDown } from 'react-bootstrap-icons';
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -12,7 +11,6 @@ function SubcardCard(props) {
     let body;
 
     const { type, items, addition } = props?.body ?? { type: '', items: '', addition: '' };
-
 
     if (props?.body) {
         items.sort((a, b) => a?.id && b?.id ? a?.id - b?.id : 1);
@@ -44,12 +42,13 @@ function SubcardCard(props) {
         {props?.children}
     </div>;
 
-    addition === 'leetcodestat'
+    addition === 'leetcodestat';
+
     return (
         <div className={styles.subcard}>
 
             {addition ?
-                <div className={styles.withAddition}>
+                <div className={`${styles.withAddition}`}>
                     {main}
                     {addition === 'leetcodestat' && <div>
                         <h4 style={{ textAlign: 'center' }}>Leetcode stats</h4>

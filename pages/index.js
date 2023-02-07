@@ -49,7 +49,11 @@ function Home({ data }) {
         <div className={styles[typeGrid]} id="info">
             {listCard?.map(item => {
                 item.info.sort((a, b) => a?.id && b?.id ? a?.id - b?.id : 1);
-                return <Card title={item?.title} key={`card_${item.id}`}>
+                return <Card
+                    title={item?.title}
+                    key={`card_${item.id}`}
+                    isSticky={item?.id === 1}
+                >
                     {item.info.map(infItem => {
                         return <SubcardCard
                             key={`subcard_${item.id}_${infItem?.id}`}
