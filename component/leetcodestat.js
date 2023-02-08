@@ -43,7 +43,7 @@ export default function LeetCodeStat(props) {
     );
 
     const badge = data.picURLS.map(pic => {
-        return <Image key={pic.url} src={pic.url} alt={pic.alt} width={40} height={40} />
+        return <Image key={pic.url} src={pic.url} alt={pic.alt} width={45} height={45} />
     });
 
     return (
