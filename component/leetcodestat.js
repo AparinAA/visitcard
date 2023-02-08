@@ -4,6 +4,7 @@ import { renderCustomizedLabel } from '../lib/helpFunction';
 import SkeletonLeetcode from './skeletonLeetcode';
 import useSWR from 'swr';
 import Image from 'next/image';
+import { lazy, useState } from 'react';
 
 const fetcher = (url) =>
     fetch(url, { method: "GET" })
@@ -42,9 +43,15 @@ export default function LeetCodeStat(props) {
         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
     );
 
-    const badge = data.picURLS.map(pic => {
-        return <Image key={pic.url} src={pic.url} alt={pic.alt} width={45} height={45} />
-    });
+    const badge = data.picURLS.map(pic =>
+        <Image
+            key={pic.url}
+            src={pic.url}
+            alt={pic.alt}
+            width={45} height={45}
+            loading="lazy"
+        />
+    );
 
     return (
         <>

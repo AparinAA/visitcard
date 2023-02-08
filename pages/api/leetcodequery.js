@@ -15,26 +15,11 @@ export default async function handler(req, res) {
                     submissions
                 }
             }
-        }
-    }
-    `
-    const quer = gql`
-    {
-        matchedUser(username: "AparinAA") {
-            username
-            socialAccounts
-            githubUrl
-            contributions {
-                points
-                questionCount
-                testcaseCount
-            }
             profile {
                 starRating
                 reputation
                 ranking
             }
-            
             badges {
                 id
                 displayName
@@ -51,6 +36,7 @@ export default async function handler(req, res) {
         }
     }
     `
+
     const client = new GraphQLClient(endpoint, { headers: {} });
     const resp = await client.request(query);
 
@@ -58,8 +44,7 @@ export default async function handler(req, res) {
         return { "name": item.difficulty, 'value': item.count }
     });
 
-    const resp2 = await client.request(quer);
-    const picURLS = resp2.matchedUser.badges.map(bage => {
+    const picURLS = resp.matchedUser.badges.map(bage => {
         const url = bage.icon;
         const template = !url.includes('https://') ? 'https://leetcode.com/' : ''
         return { url: template + url, alt: bage.displayName };

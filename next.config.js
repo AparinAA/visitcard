@@ -6,7 +6,8 @@ const nextConfig = {
 const images = {
   dangerouslyAllowSVG: true,
   contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  domains: ['leetcode.com', 'assets.leetcode.com']
+  domains: ['leetcode.com', 'assets.leetcode.com'],
+  minimumCacheTTL: 31536000
 }
 
 module.exports = {
