@@ -163,7 +163,7 @@
                         "Participated in technical creation of the largest student competition «Я - профессионал»",
                         "Created the methodological rules and taught to create contests in Yandex.Contest system, also concluded technical support, using `Python`, `C++`",
                         "Created and analized a report using pivot tables into `Python`, *Excel*",
-                        "Participated in the admission committee at HSE Univers. Created a report using pivot tables into `Python`, *Ecxel*"
+                        "Participated in the admission committee at HSE Univers. Created a report using pivot tables into `Python`, *Excel*"
                     ]
                 }
             },
@@ -177,8 +177,21 @@
                     "items": [
                         "Created and deployed multitask the website «Я-эксперт» for expert review using frameworks such as `Django` and lib's JS - `React`",
                         "Filled and made up main website and participant's person account of actual information using `HTML/CSS` for largest student competition",
-                        "Automatized a downloading and a report about actions of participants using `Python`.",
+                        "Automatized downloading and a report about actions of participants using `Python`.",
                         "Created and analized a pivot table using `Python`, *Excel*"
+                    ]
+                }
+            },
+            {
+                "id": -1,
+                "title": "Web-developer",
+                "description": "Freelance",
+                "subdescription": "September 2022 - to present",
+                "child": {
+                    "type": "list-list",
+                    "items": [
+                        "Creating a multifunction web-application with dashboards for checking deliveries and schedule repairs using `Next.js`, `React`, `react-chartjs`.",
+                        "On development process a web-application using `React`, and platform integration with Bitrix24."
                     ]
                 }
             }
