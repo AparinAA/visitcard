@@ -4,6 +4,9 @@ import React from 'react';
 import LeetCodeStat from './leetcodestat';
 import ListLink from './subcardtypes/ListLink';
 import ListItemHorizontal from './subcardtypes/ListItemHorizontal';
+import Markdown from "react-markdown";
+import { materialLight, materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -23,11 +26,12 @@ function SubcardCard(props) {
                 if (typedef === 'object') {
                     return <ListItemHorizontal key={`list-hor-${index}`} item={item} />
                 } else if (['string', 'number', 'boolean'].includes(typedef)) {
-                    return <li key={`list-hor-${index}`}><ReactMarkdown components={{ p: React.Fragment }}>{item}</ReactMarkdown></li>
+                    return <li key={`list-hor-${index}`}>
+                        <ReactMarkdown components={{ p: React.Fragment }}>{item}</ReactMarkdown>
+                    </li>
                 }
             }
-
-            return <ReactMarkdown key={index}>{item}</ReactMarkdown>;
+            return <ReactMarkdown key={index}>{item}</ReactMarkdown>
         });
 
         body = (type === 'list-horizontal' || type === 'list-list') ? <ul className={styles[type]}>{body}</ul> : <div>{body}</div>;

@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 
 import Head from 'next/head';
 //import Script from 'next/script';
@@ -30,7 +30,6 @@ function Home({ data }) {
     useEffect(() => {
         setLang(window.navigator.language);
     }, []);
-
 
     const [ref, inView, entry] = useInView({
         /* Optional options */
