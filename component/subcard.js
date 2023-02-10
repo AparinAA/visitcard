@@ -4,9 +4,6 @@ import React from 'react';
 import LeetCodeStat from './leetcodestat';
 import ListLink from './subcardtypes/ListLink';
 import ListItemHorizontal from './subcardtypes/ListItemHorizontal';
-import Markdown from "react-markdown";
-import { materialLight, materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 

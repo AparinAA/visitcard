@@ -190,7 +190,7 @@
                 "child": {
                     "type": "list-list",
                     "items": [
-                        "Creating a multifunction web-application with dashboards for checking deliveries and schedule repairs using `Next.js`, `React`, `react-chartjs`.",
+                        "Development and architecture of a multifunctional web application with dashboards for checking deliveries and schedule repairs using `Next.js`, `React`, `react-chartjs`.",
                         "On development process a web-application using `React`, and platform integration with Bitrix24."
                     ]
                 }
