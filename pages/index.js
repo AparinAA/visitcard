@@ -17,10 +17,8 @@ function reducer(state, action) {
     if (/ru/ig.test(lang)) {
         return "RU";
     }
-    if (/en/ig.test(lang)) {
-        return "EN";
-    }
-    return action;
+
+    return "EN";;
 }
 
 function Home({ data }) {
