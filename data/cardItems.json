@@ -169,16 +169,16 @@
             },
             {
                 "id": 1,
-                "title": "Web-developer, Data analyst, task management and coordination",
+                "title": "Web-developer, Full stack developer, task management and coordination",
                 "description": "Association of Organizers of student competitions «Я - профессионал»",
                 "subdescription": "January. 2021 - June 2022",
                 "child": {
                     "type": "list-list",
                     "items": [
-                        "Created and deployed multitask the website «Я-эксперт» for expert review using frameworks such as `Django` and lib's JS - `React`",
+                        "Developed UX/UI of multipage web application using `JavaScript`, `React`, `HTML/CSS`",
+                        "Participated in the design and deployment to the server of a multifunctional web application for evaluating applications by experts - \"Я - эксперт\", using for the backend - `Django`",
                         "Filled and made up main website and participant's person account of actual information using `HTML/CSS` for largest student competition",
-                        "Automatized downloading and a report about actions of participants using `Python`.",
-                        "Created and analized a pivot table using `Python`, *Excel*"
+                        "Automatized downloading and a report about actions of participants using `Python`"
                     ]
                 }
             },
