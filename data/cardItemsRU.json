@@ -94,7 +94,7 @@
                     "type": "list-horizontal",
                     "items": [
                         {
-                            "JavaScript": 3
+                            "JavaScript": 2
                         },
                         {
                             "TypeScript": 1
@@ -109,19 +109,19 @@
                             "Next.js": 1
                         },
                         {
-                            "HTML/CSS": 3
+                            "HTML/CSS": 2
                         },
                         {
                             "Python": 5
                         },
                         {
-                            "Django": 3
+                            "Django": 2
                         },
                         {
-                            "Git": 5
+                            "Git": 4
                         },
                         {
-                            "SQL": 3
+                            "SQL": 2
                         },
                         {
                             "TeX": 6
