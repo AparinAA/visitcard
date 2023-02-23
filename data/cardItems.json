@@ -176,14 +176,12 @@
                     "type": "list-list",
                     "items": [
                         "Developed UX/UI of multipage web application using `JavaScript`, `React`, `HTML/CSS`",
-                        "Participated in the design and deployment to the server of a multifunctional web application for evaluating applications by experts - \"Я - эксперт\", using for the backend - `Django`",
-                        "Filled and made up main website and participant's person account of actual information using `HTML/CSS` for largest student competition",
-                        "Automatized downloading and a report about actions of participants using `Python`"
+                        "Participated in the design and deployment to the server of a multifunctional web application for evaluating applications by experts - \"Я - эксперт\", using for the backend - `Django`"
                     ]
                 }
             },
             {
-                "id": -1,
+                "id": -2,
                 "title": "Web-developer",
                 "description": "Freelance",
                 "subdescription": "June 2022 - to present",
@@ -192,6 +190,20 @@
                     "items": [
                         "Development and architecture of a multifunctional web application with dashboards for checking deliveries and schedule repairs using `Next.js`, `React`, `react-chartjs`.",
                         "On development process a web-application using `React`, and platform integration with Bitrix24."
+                    ]
+                }
+            },
+            {
+                "id": -1,
+                "title": "Web developer, data analyst-developer",
+                "description": "Yandex",
+                "subdescription": "2019 - 2022 Июнь",
+                "child": {
+                    "type": "list-list",
+                    "items": [
+                        "Automatized downloading and a report about actions of participants using `Python`",
+                        "Filled and made up main website and participant's person account of actual information using `HTML/CSS` for largest student competition",
+                        "Created interfaces to manage user data through multiple API"
                     ]
                 }
             }
