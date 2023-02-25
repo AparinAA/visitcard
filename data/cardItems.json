@@ -241,6 +241,18 @@
                             "name": " Calculator KoronaPay",
                             "url": "https://coronacheck.vercel.app",
                             "ico": "exchange"
+                        },
+                        {
+                            "id": 6,
+                            "name": " Memoji game (vanilla JS)",
+                            "url": "https://aparinaa.github.io/memoji/",
+                            "ico": "jsicon"
+                        },
+                        {
+                            "id": 7,
+                            "name": " Countdown (vanilla JS)",
+                            "url": "https://aparinaa.github.io/stopwatchny/",
+                            "ico": "jsicon"
                         }
                     ]
                 }
