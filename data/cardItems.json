@@ -103,10 +103,13 @@
                             "React": 1
                         },
                         {
-                            "Redux": 0
+                            "Redux": 1
                         },
                         {
                             "Next.js": 1
+                        },
+                        {
+                            "Feature-Sliced Design": 1
                         },
                         {
                             "HTML/CSS": 2
