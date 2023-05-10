@@ -91,7 +91,7 @@ function Home({ data }) {
                 </footer>
             </main>
 
-        </div>
+        </div >
     )
 }
 
