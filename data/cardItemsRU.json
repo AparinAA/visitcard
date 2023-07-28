@@ -99,25 +99,25 @@
                     "type": "list-horizontal",
                     "items": [
                         {
-                            "JavaScript": 2
+                            "JavaScript": 3
                         },
                         {
                             "TypeScript": 1
                         },
                         {
-                            "React": 1
+                            "React": 2
                         },
                         {
                             "Redux": 1
                         },
                         {
-                            "Next.js": 1
+                            "Next.js": 2
                         },
                         {
                             "Feature-Sliced Design": 1
                         },
                         {
-                            "HTML/CSS": 2
+                            "HTML/CSS": 3
                         },
                         {
                             "Python": 5
