@@ -46,7 +46,7 @@
             {
                 "id": 0,
                 "title": "Yandex frontend school",
-                "subdescription": "2023 - to present (Student)"
+                "subdescription": "2023 - 2023 (student)"
             },
             {
                 "id": 1,
@@ -112,6 +112,12 @@
                         },
                         {
                             "Next.js": 2
+                        },
+                        {
+                            "Docker": 1
+                        },
+                        {
+                            "CI/CD": 1
                         },
                         {
                             "Feature-Sliced Design": 1
@@ -226,6 +232,12 @@
                 "child": {
                     "type": "list-link",
                     "items": [
+                        {
+                            "id": 0,
+                            "name": " NDA project in Yandex frontend school",
+                            "url": "https://ya.ru",
+                            "ico": "ya"
+                        },
                         {
                             "id": 1,
                             "name": " GitHub",

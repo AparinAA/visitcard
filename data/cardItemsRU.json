@@ -46,7 +46,7 @@
             {
                 "id": 0,
                 "title": "Летняя школа разработки интерфейсов Яндекса",
-                "subdescription": "2023 - по настоящее (Студент)"
+                "subdescription": "2023 - 2023 (студент)"
             },
             {
                 "id": 1,
@@ -112,6 +112,12 @@
                         },
                         {
                             "Next.js": 2
+                        },
+                        {
+                            "Docker": 1
+                        },
+                        {
+                            "CI/CD": 1
                         },
                         {
                             "Feature-Sliced Design": 1
@@ -227,6 +233,12 @@
                 "child": {
                     "type": "list-link",
                     "items": [
+                        {
+                            "id": 0,
+                            "name": " NDA проект в Академии Яндекса",
+                            "url": "https://ya.ru",
+                            "ico": "ya"
+                        },
                         {
                             "id": 1,
                             "name": " GitHub",
