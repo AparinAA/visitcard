@@ -198,7 +198,7 @@
             {
                 "id": -2,
                 "title": "Web developer",
-                "description": "Фриланс",
+                "description": "Газпром",
                 "subdescription": "2022 июнь - по настоящеее",
                 "child": {
                     "type": "list-list",

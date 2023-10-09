@@ -197,7 +197,7 @@
             {
                 "id": -2,
                 "title": "Web-developer",
-                "description": "Freelance",
+                "description": "Gazprom",
                 "subdescription": "June 2022 - to present",
                 "child": {
                     "type": "list-list",
