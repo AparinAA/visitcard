@@ -1,283 +1,283 @@
 [
-    {
-        "id": 1,
-        "title": "About me",
-        "info": [
-            {
-                "id": 1,
-                "title": "**Aleksandr Aparin** (mathematician, developer)",
-                "child": {
-                    "type": "list-link",
-                    "items": [
-                        {
-                            "id": 1,
-                            "name": " @alxaparin",
-                            "url": "https://t.me/alxaparin",
-                            "ico": "telegram"
-                        },
-                        {
-                            "id": 2,
-                            "name": " alxaparin@gmail.com",
-                            "url": "mailto:alxaparin@mgail.com",
-                            "ico": "email"
-                        },
-                        {
-                            "id": 3,
-                            "name": " Linkedin",
-                            "url": "https://www.linkedin.com/in/aleksandr-aparin-707917215",
-                            "ico": "linkedin"
-                        },
-                        {
-                            "id": 4,
-                            "name": " LeetCode Profile",
-                            "url": "https://leetcode.com/AparinAA/",
-                            "ico": "leetcode"
-                        }
-                    ],
-                    "addition": "leetcodestat"
-                }
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "title": "Education",
-        "info": [
-            {
-                "id": 0,
-                "title": "Yandex frontend school",
-                "subdescription": "2023 - 2023 (student)"
-            },
-            {
-                "id": 1,
-                "title": "Lomonosov Moscow State University (MSU)",
-                "description": "Faculty of fundamental mechanics and mathematics. Department theory of probabilities",
-                "subdescription": "2015 - 2021 (Master)"
-            },
-            {
-                "id": 2,
-                "title": "Lomonosov Moscow State University (MSU)",
-                "description": "Faculty of fundamental mechanics and mathematics. Department theory of probabilities",
-                "subdescription": "2021 - to present (PhD student)"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "title": "Science work",
-        "info": [
-            {
-                "id": 1,
-                "title": "On the sojourn time distribution of a random walk at a multidimensional lattice point",
-                "description": "Theory of Probability and Its Applications",
-                "subdescription": "Oct. 2021",
-                "child": {
-                    "type": "list-link-horizontal",
-                    "items": [
-                        {
-                            "id": 1,
-                            "name": "RU version",
-                            "url": "http://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=tvp&paperid=5517&option_lang=rus"
-                        },
-                        {
-                            "id": 2,
-                            "name": "EN version",
-                            "url": "https://epubs.siam.org/doi/pdf/10.1137/S0040585X97T990599"
-                        }
-                    ]
-                }
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "title": "Proficient",
-        "info": [
-            {
-                "id": 1,
-                "child": {
-                    "type": "list-horizontal",
-                    "items": [
-                        {
-                            "JavaScript": 3
-                        },
-                        {
-                            "TypeScript": 1
-                        },
-                        {
-                            "React": 2
-                        },
-                        {
-                            "Redux": 1
-                        },
-                        {
-                            "Next.js": 2
-                        },
-                        {
-                            "Docker": 1
-                        },
-                        {
-                            "CI/CD": 1
-                        },
-                        {
-                            "Feature-Sliced Design": 1
-                        },
-                        {
-                            "HTML/CSS": 3
-                        },
-                        {
-                            "Python": 5
-                        },
-                        {
-                            "Django": 2
-                        },
-                        {
-                            "Git": 4
-                        },
-                        {
-                            "SQL": 2
-                        },
-                        {
-                            "TeX": 6
-                        }
-                    ]
-                }
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "title": "Work experience",
-        "info": [
-            {
-                "id": 3,
-                "title": "Main deputy chief",
-                "description": "Lomonosov Moscow State University (MSU). Department Admissions Committee and work with matriculant",
-                "subdescription": "February 2016 - October 2019",
-                "child": {
-                    "type": "list-list",
-                    "items": [
-                        "Management",
-                        "Organized competitions for schoolchild and matriculant exams",
-                        "Filled website actual information using `HTML`",
-                        "Created a report using pivot tables into `Python`, *Excel*",
-                        "Automatized process finding/recognition a paperworks of participant competitions and matriculant exams using `FPDF` and `OpenCV` libs in `Python`",
-                        "Analyzed rating among participant"
-                    ]
-                }
-            },
-            {
-                "id": 2,
-                "title": "Data analyst, task management and coordination",
-                "description": "National Research University Higher School of Economics (HSE)",
-                "subdescription": "October 2019 - June 2022",
-                "child": {
-                    "type": "list-list",
-                    "items": [
-                        "Participated in technical creation of the largest student competition «Я - профессионал»",
-                        "Created the methodological rules and taught to create contests in Yandex.Contest system, also concluded technical support, using `Python`, `C++`",
-                        "Created and analized a report using pivot tables into `Python`, *Excel*",
-                        "Participated in the admission committee at HSE Univers. Created a report using pivot tables into `Python`, *Excel*"
-                    ]
-                }
-            },
-            {
-                "id": 1,
-                "title": "Web-developer, Full stack developer, task management and coordination",
-                "description": "Association of Organizers of student competitions «Я - профессионал»",
-                "subdescription": "January. 2021 - June 2022",
-                "child": {
-                    "type": "list-list",
-                    "items": [
-                        "Developed UX/UI of multipage web application using `JavaScript`, `React`, `HTML/CSS`",
-                        "Participated in the design and deployment to the server of a multifunctional web application for evaluating applications by experts - \"Я - эксперт\", using for the backend - `Django`"
-                    ]
-                }
-            },
-            {
-                "id": -2,
-                "title": "Web-developer",
-                "description": "Gazprom",
-                "subdescription": "June 2022 - to present",
-                "child": {
-                    "type": "list-list",
-                    "items": [
-                        "Development and architecture of a multifunctional web application with dashboards for checking deliveries and schedule repairs using `Next.js`, `React`, `react-chartjs`.",
-                        "On development process a web-application using `React`, and platform integration with Bitrix24."
-                    ]
-                }
-            },
-            {
-                "id": -1,
-                "title": "Web developer, data analyst-developer",
-                "description": "Yandex",
-                "subdescription": "2019 - 2022 Июнь",
-                "child": {
-                    "type": "list-list",
-                    "items": [
-                        "Automatized downloading and a report about actions of participants using `Python`",
-                        "Filled and made up main website and participant's person account of actual information using `HTML/CSS` for largest student competition",
-                        "Created interfaces to manage user data through multiple API"
-                    ]
-                }
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "title": "Projects",
-        "info": [
-            {
-                "id": 1,
-                "child": {
-                    "type": "list-link",
-                    "items": [
-                        {
-                            "id": 0,
-                            "name": " NDA project in Yandex frontend school",
-                            "url": "https://ya.ru",
-                            "ico": "ya"
-                        },
-                        {
-                            "id": 1,
-                            "name": " GitHub",
-                            "url": "https://github.com/AparinAA",
-                            "ico": "github"
-                        },
-                        {
-                            "id": 2,
-                            "name": " SpreadMeta",
-                            "url": "https://aparinaa.github.io/monitor",
-                            "ico": "spread"
-                        },
-                        {
-                            "id": 4,
-                            "name": " npm packages",
-                            "url": "https://www.npmjs.com/~x6p",
-                            "ico": "npm"
-                        },
-                        {
-                            "id": 5,
-                            "name": " Calculator KoronaPay",
-                            "url": "https://coronacheck.vercel.app",
-                            "ico": "exchange"
-                        }
-                    ]
-                }
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "title": "Hobbies",
-        "info": [
-            {
-                "id": 1,
-                "child": {
-                    "type": "text",
-                    "items": ["Finance", "Crypto/Cryptocurrency/Smartcontracts"]
-                }
-            }
-        ]
-    }
+	{
+		"id": 1,
+		"title": "About me",
+		"info": [
+			{
+				"id": 1,
+				"title": "**Aleksandr Aparin** (mathematician, developer)",
+				"child": {
+					"type": "list-link",
+					"items": [
+						{
+							"id": 1,
+							"name": " @alxaparin",
+							"url": "https://t.me/alxaparin",
+							"ico": "telegram"
+						},
+						{
+							"id": 2,
+							"name": " alxaparin@gmail.com",
+							"url": "mailto:alxaparin@mgail.com",
+							"ico": "email"
+						},
+						{
+							"id": 3,
+							"name": " Linkedin",
+							"url": "https://www.linkedin.com/in/aleksandr-aparin-707917215",
+							"ico": "linkedin"
+						},
+						{
+							"id": 4,
+							"name": " LeetCode Profile",
+							"url": "https://leetcode.com/AparinAA/",
+							"ico": "leetcode"
+						}
+					],
+					"addition": "leetcodestat"
+				}
+			}
+		]
+	},
+	{
+		"id": 5,
+		"title": "Education",
+		"info": [
+			{
+				"id": 0,
+				"title": "Yandex frontend school",
+				"subdescription": "2023 - 2023 (student)"
+			},
+			{
+				"id": 1,
+				"title": "Lomonosov Moscow State University (MSU)",
+				"description": "Faculty of fundamental mechanics and mathematics. Department theory of probabilities",
+				"subdescription": "2015 - 2021 (Master)"
+			},
+			{
+				"id": 2,
+				"title": "Lomonosov Moscow State University (MSU)",
+				"description": "Faculty of fundamental mechanics and mathematics. Department theory of probabilities",
+				"subdescription": "2021 - to present (PhD student)"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"title": "Science work",
+		"info": [
+			{
+				"id": 1,
+				"title": "On the sojourn time distribution of a random walk at a multidimensional lattice point",
+				"description": "Theory of Probability and Its Applications",
+				"subdescription": "Oct. 2021",
+				"child": {
+					"type": "list-link-horizontal",
+					"items": [
+						{
+							"id": 1,
+							"name": "RU version",
+							"url": "http://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=tvp&paperid=5517&option_lang=rus"
+						},
+						{
+							"id": 2,
+							"name": "EN version",
+							"url": "https://epubs.siam.org/doi/pdf/10.1137/S0040585X97T990599"
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"id": 2,
+		"title": "Proficient",
+		"info": [
+			{
+				"id": 1,
+				"child": {
+					"type": "list-horizontal",
+					"items": [
+						{
+							"JavaScript": 3
+						},
+						{
+							"TypeScript": 1
+						},
+						{
+							"React": 2
+						},
+						{
+							"Redux": 1
+						},
+						{
+							"Next.js": 2
+						},
+						{
+							"Docker": 1
+						},
+						{
+							"CI/CD": 1
+						},
+						{
+							"Feature-Sliced Design": 1
+						},
+						{
+							"HTML/CSS": 3
+						},
+						{
+							"Python": 5
+						},
+						{
+							"Django": 2
+						},
+						{
+							"Git": 4
+						},
+						{
+							"SQL": 2
+						},
+						{
+							"TeX": 6
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"id": 3,
+		"title": "Work experience",
+		"info": [
+			{
+				"id": 3,
+				"title": "Main deputy chief",
+				"description": "Lomonosov Moscow State University (MSU). Department Admissions Committee and work with matriculant",
+				"subdescription": "February 2016 - October 2019",
+				"child": {
+					"type": "list-list",
+					"items": [
+						"Management",
+						"Organized competitions for schoolchild and matriculant exams",
+						"Filled website actual information using `HTML`",
+						"Created a report using pivot tables into `Python`, *Excel*",
+						"Automatized process finding/recognition a paperworks of participant competitions and matriculant exams using `FPDF` and `OpenCV` libs in `Python`",
+						"Analyzed rating among participant"
+					]
+				}
+			},
+			{
+				"id": 2,
+				"title": "Data analyst, task management and coordination",
+				"description": "National Research University Higher School of Economics (HSE)",
+				"subdescription": "October 2019 - June 2022",
+				"child": {
+					"type": "list-list",
+					"items": [
+						"Participated in technical creation of the largest student competition «Я - профессионал»",
+						"Created the methodological rules and taught to create contests in Yandex.Contest system, also concluded technical support, using `Python`, `C++`",
+						"Created and analized a report using pivot tables into `Python`, *Excel*",
+						"Participated in the admission committee at HSE Univers. Created a report using pivot tables into `Python`, *Excel*"
+					]
+				}
+			},
+			{
+				"id": 1,
+				"title": "Web-developer, Full stack developer, task management and coordination",
+				"description": "Association of Organizers of student competitions «Я - профессионал»",
+				"subdescription": "January. 2021 - June 2022",
+				"child": {
+					"type": "list-list",
+					"items": [
+						"Developed UX/UI of multipage web application using `JavaScript`, `React`, `HTML/CSS`",
+						"Participated in the design and deployment to the server of a multifunctional web application for evaluating applications by experts - \"Я - эксперт\", using for the backend - `Django`"
+					]
+				}
+			},
+			{
+				"id": -2,
+				"title": "Web-developer",
+				"description": "Gazprom",
+				"subdescription": "June 2022 - to present",
+				"child": {
+					"type": "list-list",
+					"items": [
+						"Project development of web applications involved designing the structure/infrastructure for various application features such as personal accounts, active keys, equipment, and customization of dashboards, using `Javascript`, `Typescript`, `React` with `Redux/Rtq-query`, `React-chartjs`, `styled-components`, `CI/CD`, `Git`, `Docker`, `Yandex.Cloud`, `Nginx`, and `Restful API`.",
+						"Additionally, I have experience supervising and reviewing the work of junior specialists within a team."
+					]
+				}
+			},
+			{
+				"id": -1,
+				"title": "Web developer, data analyst-developer",
+				"description": "Yandex",
+				"subdescription": "2019 - 2022 June",
+				"child": {
+					"type": "list-list",
+					"items": [
+						"Automatized downloading and a report about actions of participants using `Python`",
+						"Filled and made up main website and participant's person account of actual information using `HTML/CSS` for largest student competition",
+						"Created interfaces to manage user data through multiple API"
+					]
+				}
+			}
+		]
+	},
+	{
+		"id": 4,
+		"title": "Projects",
+		"info": [
+			{
+				"id": 1,
+				"child": {
+					"type": "list-link",
+					"items": [
+						{
+							"id": 0,
+							"name": " NDA project in Yandex frontend school",
+							"url": "https://ya.ru",
+							"ico": "ya"
+						},
+						{
+							"id": 1,
+							"name": " GitHub",
+							"url": "https://github.com/AparinAA",
+							"ico": "github"
+						},
+						{
+							"id": 2,
+							"name": " SpreadMeta",
+							"url": "https://aparinaa.github.io/monitor",
+							"ico": "spread"
+						},
+						{
+							"id": 4,
+							"name": " npm packages",
+							"url": "https://www.npmjs.com/~x6p",
+							"ico": "npm"
+						},
+						{
+							"id": 5,
+							"name": " Calculator KoronaPay",
+							"url": "https://coronacheck.vercel.app",
+							"ico": "exchange"
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"id": 7,
+		"title": "Hobbies",
+		"info": [
+			{
+				"id": 1,
+				"child": {
+					"type": "text",
+					"items": ["Finance", "Crypto/Cryptocurrency/Smartcontracts"]
+				}
+			}
+		]
+	}
 ]
