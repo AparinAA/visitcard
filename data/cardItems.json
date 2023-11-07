@@ -202,8 +202,8 @@
 				"child": {
 					"type": "list-list",
 					"items": [
-						"Project development of web applications involved designing the structure/infrastructure for various application features such as personal accounts, active keys, equipment, and customization of dashboards, using `Javascript`, `Typescript`, `React` with `Redux/Rtq-query`, `React-chartjs`, `styled-components`, `CI/CD`, `Git`, `Docker`, `Yandex.Cloud`, `Nginx`, and `Restful API`.",
-						"Additionally, I have experience supervising and reviewing the work of junior specialists within a team."
+						"Project development of web applications involved designing the structure/infrastructure for various application features such as personal accounts, active keys, equipment, and customization of dashboards, using `Javascript`, `Typescript`, `React` with `Redux/Rtq-query`, `React-chartjs`, `styled-components`, `CI/CD`, `Git`, `Docker`, `Yandex.Cloud`, `Nginx`, and `Restful API`",
+						"Additionally, I have experience supervising and reviewing the work of junior specialists within a team"
 					]
 				}
 			},
@@ -252,15 +252,15 @@
 						},
 						{
 							"id": 4,
-							"name": " npm packages",
-							"url": "https://www.npmjs.com/~x6p",
-							"ico": "npm"
-						},
-						{
-							"id": 5,
 							"name": " Calculator KoronaPay",
 							"url": "https://coronacheck.vercel.app",
 							"ico": "exchange"
+						},
+						{
+							"id": 5,
+							"name": " npm packages",
+							"url": "https://www.npmjs.com/~x6p",
+							"ico": "npm"
 						}
 					]
 				}

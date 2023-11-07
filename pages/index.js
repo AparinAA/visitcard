@@ -27,19 +27,6 @@ export const metadata = {
 		description: "The CV page",
 		url: "https://aparinaleksandr.site",
 		siteName: "Visitcard",
-		images: [
-			{
-				url: "https://nextjs.org/og.png",
-				width: 800,
-				height: 600,
-			},
-			{
-				url: "https://nextjs.org/og-alt.png",
-				width: 1800,
-				height: 1600,
-				alt: "My custom alt",
-			},
-		],
 		locale: "en_US",
 		type: "website",
 	},
@@ -107,16 +94,7 @@ function Home({ data }) {
 				id="title"
 				ref={ref}
 				style={{
-					opacity:
-						ratio *
-							ratio *
-							ratio *
-							ratio *
-							ratio *
-							ratio *
-							ratio *
-							ratio -
-						0.1,
+					opacity: ratio ** 9 - 0.1,
 					backgroundImage: `url(${prefix}/welcomtextMini.svg)`,
 				}}
 			/>
@@ -124,7 +102,7 @@ function Home({ data }) {
 			<main
 				className={styles.main}
 				id="main"
-				style={{ opacity: 1 - 1.2 * ratio * ratio }}
+				style={{ opacity: 1 - 1.2 * ratio ** 3 }}
 			>
 				<ChangeLang props={{ prefix, inView, setLang, lang }} />
 				{gridCards}
