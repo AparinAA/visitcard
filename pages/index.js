@@ -9,6 +9,7 @@ import SubcardCard from "../component/subcard";
 import ChangeLang from "../component/ChangeLang";
 
 import { readData } from "../data/read";
+import { drawMagicLine } from "../lib/helpFunction";
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -38,6 +39,7 @@ function Home({ data }) {
 
 	useEffect(() => {
 		setLang(window.navigator.language);
+		drawMagicLine();
 	}, []);
 
 	const [ref, inView, entry] = useInView({
@@ -97,7 +99,17 @@ function Home({ data }) {
 					opacity: ratio ** 9 - 0.1,
 					backgroundImage: `url(${prefix}/welcomtextMini.svg)`,
 				}}
-			/>
+			>
+				<canvas
+					id="mouseTrailCanvas"
+					style={{
+						display: "block",
+						position: "absolute",
+						top: 0,
+						left: 0,
+					}}
+				></canvas>
+			</div>
 
 			<main
 				className={styles.main}
