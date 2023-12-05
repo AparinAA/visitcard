@@ -39,7 +39,9 @@ function Home({ data }) {
 
 	useEffect(() => {
 		setLang(window.navigator.language);
-		drawMagicLine();
+		let id = drawMagicLine();
+
+		return () => clearTimeout(id);
 	}, []);
 
 	const [ref, inView, entry] = useInView({
