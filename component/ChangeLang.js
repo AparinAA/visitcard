@@ -2,7 +2,8 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 
-function ChangeLang({ prefix, inView, setLang, lang }) {
+function ChangeLang({ props }) {
+	const { prefix, inView, setLang, lang } = props;
 	return (
 		<div
 			className={`${!inView ? styles.sticky : ""} ${styles.langMenu}`}
