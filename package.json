@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap-icons": "^1.8.3",
+    "classnames": "^2.3.2",
     "github-markdown-css": "^5.1.0",
     "graphql": "^16.8.1",
     "graphql-request": "^5.2.0",

@@ -19,7 +19,7 @@ function ListLink({ data }) {
 
 	return (
 		<a
-			className={`${styles[type]}`}
+			className={styles[type]}
 			rel="noreferrer"
 			href={item.url}
 			target="_blank"

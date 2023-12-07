@@ -1,12 +1,17 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import SelectedLang from "./SelectedLang";
+import classNames from "classnames";
 
 function ChangeLang({ props }) {
 	const { prefix, inView, setLang, lang } = props;
 	return (
 		<div
-			className={`${!inView ? styles.sticky : ""} ${styles.langMenu}`}
+			className={classNames({
+				[styles.sticky]: !inView,
+				[styles.langMenu]: true,
+			})}
 			style={{ zIndex: "100" }}
 		>
 			{
@@ -25,41 +30,19 @@ function ChangeLang({ props }) {
 				</a>
 			}
 
-			<input
-				type="radio"
-				name="langRadio"
-				className={styles.buttonLang}
-				onChange={(e) => setLang(e.target.value)}
-				value="EN"
-				id="buttonEN"
-				checked={lang === "EN"}
+			<SelectedLang
+				curLang={lang}
+				lang="en"
+				setLang={setLang}
+				prefix={prefix}
 			/>
-			<label htmlFor="buttonEN" className={styles.labelButtonLang}>
-				<Image
-					src={`${prefix}/enflag.svg`}
-					alt="en"
-					width={30}
-					height={15}
-				/>
-			</label>
 
-			<input
-				type="radio"
-				name="langRadio"
-				className={`${styles.buttonLang} ${styles.ru}`}
-				onChange={(e) => setLang(e.target.value)}
-				value="RU"
-				id="buttonRU"
-				checked={lang === "RU"}
+			<SelectedLang
+				curLang={lang}
+				lang="ru"
+				setLang={setLang}
+				prefix={prefix}
 			/>
-			<label htmlFor="buttonRU" className={styles.labelButtonLang}>
-				<Image
-					src={`${prefix}/ruflag.svg`}
-					alt="ru"
-					width={30}
-					height={15}
-				/>
-			</label>
 		</div>
 	);
 }
