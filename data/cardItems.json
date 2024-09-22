@@ -195,10 +195,25 @@
 				}
 			},
 			{
+				"id": -3,
+				"title": "Web-developer",
+				"description": "Clickadilla",
+				"subdescription": "January 2024 - to present",
+				"child": {
+					"type": "list-list",
+					"items": [
+						"Development and management of multiple backend-for-frontend projects using Node.js, Express.js, Fastify, PostgreSQL, and Redis",
+						"Setting up CI/CD, Docker, and Docker Compose",
+						"Development and optimization of widgets for the web frontend using vanilla JavaScript",
+						"Implementation of screenshot and integration testing using the Playwright framework"
+					]
+				}
+			},
+			{
 				"id": -2,
 				"title": "Web-developer",
 				"description": "Gazprom",
-				"subdescription": "June 2022 - to present",
+				"subdescription": "June 2022 - October 2023",
 				"child": {
 					"type": "list-list",
 					"items": [

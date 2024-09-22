@@ -99,31 +99,31 @@
 					"type": "list-horizontal",
 					"items": [
 						{
-							"JavaScript": 3
+							"JavaScript": 4
 						},
 						{
-							"TypeScript": 1
+							"TypeScript": 2
 						},
 						{
-							"React": 2
+							"React": 3
 						},
 						{
-							"Redux": 1
+							"Redux": 2
 						},
 						{
 							"Next.js": 2
 						},
 						{
-							"Docker": 1
+							"Docker": 2
 						},
 						{
-							"CI/CD": 1
+							"CI/CD": 2
 						},
 						{
 							"Feature-Sliced Design": 1
 						},
 						{
-							"HTML/CSS": 3
+							"HTML/CSS": 4
 						},
 						{
 							"Python": 5
@@ -132,13 +132,13 @@
 							"Django": 2
 						},
 						{
-							"Git": 4
+							"Git": 5
 						},
 						{
 							"SQL": 2
 						},
 						{
-							"TeX": 6
+							"TeX": 7
 						}
 					]
 				}
@@ -196,10 +196,25 @@
 				}
 			},
 			{
+				"id": -3,
+				"title": "Web developer",
+				"description": "Clickadilla",
+				"subdescription": "Январь 2024 - по настоящее",
+				"child": {
+					"type": "list-list",
+					"items": [
+						"Разработка и курирование нескольких проектов backend-for-frontend с использованием Node.js, Express.js, Fastify, PostgreSQL, Redis.",
+						"Настройка CI/CD, Docker и Docker Compose.",
+						"Разработка и оптимизация виджетов для веб-фронтенда с использованием ванильного JavaScript.",
+						"Внедрение скриншотного и интеграционного тестирования с использованием фреймворка Playwright."
+					]
+				}
+			},
+			{
 				"id": -2,
 				"title": "Web developer",
 				"description": "Газпром",
-				"subdescription": "2022 июнь - по настоящеее",
+				"subdescription": "2022 июнь - 2023 октябрь",
 				"child": {
 					"type": "list-list",
 					"items": [
