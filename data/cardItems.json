@@ -150,23 +150,6 @@
 		"title": "Work experience",
 		"info": [
 			{
-				"id": 3,
-				"title": "Main deputy chief",
-				"description": "Lomonosov Moscow State University (MSU). Department Admissions Committee and work with matriculant",
-				"subdescription": "February 2016 - October 2019",
-				"child": {
-					"type": "list-list",
-					"items": [
-						"Management",
-						"Organized competitions for schoolchild and matriculant exams",
-						"Filled website actual information using `HTML`",
-						"Created a report using pivot tables into `Python`, *Excel*",
-						"Automatized process finding/recognition a paperworks of participant competitions and matriculant exams using `FPDF` and `OpenCV` libs in `Python`",
-						"Analyzed rating among participant"
-					]
-				}
-			},
-			{
 				"id": 2,
 				"title": "Data analyst, task management and coordination",
 				"description": "National Research University Higher School of Economics (HSE)",
