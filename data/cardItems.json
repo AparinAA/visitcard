@@ -186,11 +186,11 @@
 					"type": "list-list",
 					"items": [
 						"**Application Core Performance Optimization**",
-						"Optimized core application methods using vanilla JavaScript, outperforming standard libraries.",
+						"Development of high-performance libraries for the core application in vanilla JavaScript.",
 						"Integrated SSR, significantly reducing load times and improving content delivery.",
 						"Configured and optimized GitLab CI/CD, Docker, and Docker Compose for faster deployments.",
 						"**High-Performance CRM Development**",
-						"Developed high-performance CRM UI components using `React.js` and `Next.js` SSR.",
+						"Developed high-performance UI components for CRM using `React.js` and `Next.js` SSR.",
 						"Designed and implemented application architecture and infrastructure for scalability.",
 						"Optimized component rendering and state management for smooth performance."
 					]
