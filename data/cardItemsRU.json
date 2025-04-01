@@ -182,7 +182,7 @@
 				"id": -3,
 				"title": "Web developer",
 				"description": "Clickadilla",
-				"subdescription": "2024 Январь - по настоящее",
+				"subdescription": "2023 август - по настоящее",
 				"child": {
 					"type": "list-list",
 					"items": [
@@ -201,7 +201,7 @@
 				"id": -2,
 				"title": "Web developer",
 				"description": "Газпром",
-				"subdescription": "2022 июнь - 2023 октябрь",
+				"subdescription": "2022 июнь - 2023 август",
 				"child": {
 					"type": "list-list",
 					"items": [
