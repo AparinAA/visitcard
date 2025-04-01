@@ -1,7 +1,7 @@
 ### Hello. Welcome to my personal site
 
-[Click for go to site](https://aparinaleksandr.site)
+[Click for go to site](https://aleksandraparin.site)
 
-[My CV in Russia](https://aparinaleksandr.site/Aparin_CV_RU.pdf)
+[My CV in Russia](https://aleksandraparin.site/Aparin_CV_RU.pdf)
 
-[My CV in English](https://aparinaleksandr.site/Aparin_CV_EN.pdf)
+[My CV in English](https://aleksandraparin.site/Aparin_CV_EN.pdf)
