@@ -24,7 +24,7 @@
 						{
 							"id": 3,
 							"name": " Linkedin",
-							"url": "https://www.linkedin.com/in/aleksandr-aparin-707917215",
+							"url": "https://www.linkedin.com/in/alxaparin",
 							"ico": "linkedin"
 						},
 						{
@@ -99,43 +99,37 @@
 					"type": "list-horizontal",
 					"items": [
 						{
-							"JavaScript": 4
+							"JavaScript": 5
 						},
 						{
-							"TypeScript": 3
+							"TypeScript": 5
 						},
 						{
-							"React": 3
+							"React": 4
 						},
 						{
-							"Redux": 2
+							"Redux": 3
 						},
 						{
-							"Next.js": 2
+							"Next.js": 3
 						},
 						{
-							"Docker": 2
+							"Docker": 3
 						},
 						{
-							"CI/CD": 2
+							"CI/CD": 3
 						},
 						{
-							"Feature-Sliced Design": 1
+							"HTML/CSS": 5
 						},
 						{
-							"HTML/CSS": 4
-						},
-						{
-							"Python": 5
-						},
-						{
-							"Django": 2
+							"Node.js": 5
 						},
 						{
 							"Git": 5
 						},
 						{
-							"SQL": 2
+							"SQL": 1
 						},
 						{
 							"TeX": 7
@@ -151,75 +145,60 @@
 		"info": [
 			{
 				"id": 2,
-				"title": "Data analyst, task management and coordination",
+				"title": "Data analyst-developer",
 				"description": "National Research University Higher School of Economics (HSE)",
-				"subdescription": "October 2019 - June 2022",
+				"subdescription": "2019 - 2022",
 				"child": {
 					"type": "list-list",
 					"items": [
-						"Participated in technical creation of the largest student competition «Я - профессионал»",
-						"Created the methodological rules and taught to create contests in Yandex.Contest system, also concluded technical support, using `Python`, `C++`",
-						"Created and analized a report using pivot tables into `Python`, *Excel*",
-						"Participated in the admission committee at HSE Univers. Created a report using pivot tables into `Python`, *Excel*"
-					]
-				}
-			},
-			{
-				"id": 1,
-				"title": "Web-developer, Full stack developer, task management and coordination",
-				"description": "Association of Organizers of student competitions «Я - профессионал»",
-				"subdescription": "January. 2021 - June 2022",
-				"child": {
-					"type": "list-list",
-					"items": [
-						"Developed UX/UI of multipage web application using `JavaScript`, `React`, `HTML/CSS`",
-						"Participated in the design and deployment to the server of a multifunctional web application for evaluating applications by experts - \"Я - эксперт\", using for the backend - `Django`"
+						"Participated in technical creation of the largest student competition «Я - профессионал»;",
+						"Created the methodological rules and taught to create contests in Yandex.Contest system, also concluded technical support, using *Python*, *C++*",
+						"Created and analized a report using pivot tables into *Python*, *Excel*"
 					]
 				}
 			},
 			{
 				"id": -3,
-				"title": "Web-developer",
+				"title": "Software engineer (Frontend)",
 				"description": "Clickadilla",
 				"subdescription": "August 2023 - to present",
 				"child": {
 					"type": "list-list",
 					"items": [
-						"**Application Core Performance Optimization**",
-						"Development of high-performance libraries for the core application in vanilla JavaScript.",
-						"Integrated SSR, significantly reducing load times and improving content delivery.",
-						"Configured and optimized GitLab CI/CD, Docker, and Docker Compose for faster deployments.",
-						"**High-Performance CRM Development**",
-						"Developed high-performance UI components for CRM using `React.js` and `Next.js` SSR.",
-						"Designed and implemented application architecture and infrastructure for scalability.",
-						"Optimized component rendering and state management for smooth performance."
+						"Optimized the advertising integration core app with vanilla JavaScript/TypeScript, reducing bundle size by 15–20%",
+						"Integrated SSR method, reducing TTFB and TTI by up to 40%",
+						"Built high-performance CRM Next.js/Redux/Rtk-query for real-time workloads",
+						"Designed a scalable architecture, improving build time and memory eﬃciency by 50%",
+						"Focused on system optimization and performance-driven development Docker, CI/CD"
 					]
 				}
 			},
 			{
 				"id": -2,
-				"title": "Web-developer",
-				"description": "Gazprom",
+				"title": "Frontend developer",
+				"description": "Gazprom Innovation Laboratory (contract)",
 				"subdescription": "June 2022 - August 2023",
 				"child": {
 					"type": "list-list",
 					"items": [
-						"Project development of web applications involved designing the structure/infrastructure for various application features such as personal accounts, active keys, equipment, and customization of dashboards, using `Javascript`, `Typescript`, `React` with `Redux/Rtq-query`, `React-chartjs`, `styled-components`, `CI/CD`, `Git`, `Docker`, `Yandex.Cloud`, `Nginx`, and `Restful API`",
-						"Additionally, I have experience supervising and reviewing the work of junior specialists within a team"
+						"Develop personal accounts, customization of dashboards using *react-chart.js*",
+						"Create chat with AI bot to RAG using *React*, *Redux/Rtq-query*, *HTTP-streaming*",
+						"Building and configuring CI/CD pipelines and deploy with *Git/Docker/Yandex.Cloud/Nginx*",
+						"Restful API design"
 					]
 				}
 			},
 			{
 				"id": -1,
-				"title": "Web developer, data analyst-developer",
-				"description": "Yandex",
-				"subdescription": "2019 - 2022 June",
+				"title": "Web-developer, data analyst-developer",
+				"description": "Yandex (part-time)",
+				"subdescription": "2019 - 2022",
 				"child": {
 					"type": "list-list",
 					"items": [
-						"Automatized downloading and a report about actions of participants using `Python`",
-						"Filled and made up main website and participant's person account of actual information using `HTML/CSS` for largest student competition",
-						"Created interfaces to manage user data through multiple API"
+						"Automatized downloading and a report about actions of participants using *Python*",
+						"Created interfaces to manage user data through multiple API",
+						"Web-application for internal voting using *JavaScript*, *React*, *HTML/CSS*"
 					]
 				}
 			}
@@ -277,7 +256,12 @@
 				"id": 1,
 				"child": {
 					"type": "text",
-					"items": ["Finance", "Crypto/Cryptocurrency/Smartcontracts"]
+					"items": [
+						"Psychology",
+						"Skiing",
+						"Finance",
+						"Crypto/Cryptocurrency/Smartcontracts"
+					]
 				}
 			}
 		]
