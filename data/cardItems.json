@@ -165,7 +165,8 @@
 				"child": {
 					"type": "list-list",
 					"items": [
-						"Optimized the advertising integration core app with vanilla JavaScript/TypeScript, reducing bundle size by 15–20%",
+						"Advertising integration into a website / webView / Telegram-mini-app",
+						"Optimized core app with vanilla JavaScript/TypeScript, reducing bundle size by 15–20%",
 						"Integrated SSR method, reducing TTFB and TTI by up to 40%",
 						"Built high-performance CRM Next.js/Redux/Rtk-query for real-time workloads",
 						"Designed a scalable architecture, improving build time and memory eﬃciency by 50%",
