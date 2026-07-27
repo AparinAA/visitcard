@@ -9,9 +9,12 @@
 :root {
 	--bg: #fbfbfd;
 	--card: #ffffff;
-	--fg: #16181d;
-	--fg-muted: #6b7280;
-	--fg-faint: #9aa1ac;
+	--fg: #14161a;
+	/* Reading copy — job bullets, links, descriptions. Deliberately close to
+	   --fg: this is body text, not secondary chrome. */
+	--fg-body: #3d434c;
+	--fg-muted: #585f6c;
+	--fg-faint: #7f8794;
 	--line: #e7e9ee;
 	--accent: #0071f3;
 	--accent-soft: #0071f31a;
@@ -26,9 +29,10 @@
 	:root {
 		--bg: #0c0d10;
 		--card: #16181d;
-		--fg: #eceef2;
-		--fg-muted: #9aa1ac;
-		--fg-faint: #6b7280;
+		--fg: #f0f2f6;
+		--fg-body: #cbd1db;
+		--fg-muted: #a8afba;
+		--fg-faint: #838b98;
 		--line: #262a32;
 		--accent: #4da3ff;
 		--accent-soft: #4da3ff1f;
@@ -411,8 +415,8 @@ html[data-lang="RU"] .lang__btn[data-lang="RU"] {
 	padding: 5px 8px;
 	margin-left: -8px;
 	border-radius: 8px;
-	color: var(--fg-muted);
-	font-size: 0.92rem;
+	color: var(--fg-body);
+	font-size: 0.95rem;
 	transition: background 0.18s, color 0.18s;
 }
 
@@ -536,8 +540,8 @@ html[data-lang="RU"] .lang__btn[data-lang="RU"] {
 .job__bullets li {
 	position: relative;
 	padding-left: 16px;
-	font-size: 0.92rem;
-	color: var(--fg-muted);
+	font-size: 0.95rem;
+	color: var(--fg-body);
 }
 
 .job__bullets li::before {
@@ -553,8 +557,8 @@ html[data-lang="RU"] .lang__btn[data-lang="RU"] {
 
 .job__stack {
 	margin-top: 12px;
-	font-size: 0.82rem;
-	color: var(--fg-muted);
+	font-size: 0.85rem;
+	color: var(--fg-body);
 }
 
 .job__stackLabel {
@@ -579,8 +583,8 @@ html[data-lang="RU"] .lang__btn[data-lang="RU"] {
 }
 
 .entry__meta {
-	font-size: 0.9rem;
-	color: var(--fg-muted);
+	font-size: 0.92rem;
+	color: var(--fg-body);
 }
 
 .entry__period {
@@ -685,8 +689,8 @@ html[data-lang="RU"] .lang__btn[data-lang="RU"] {
 	display: flex;
 	flex-direction: column;
 	gap: 3px;
-	font-size: 0.82rem;
-	color: var(--fg-muted);
+	font-size: 0.85rem;
+	color: var(--fg-body);
 }
 
 .leet__legend li {

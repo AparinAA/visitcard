@@ -131,7 +131,7 @@ export const SECTIONS: Section[] = [
 			{ name: "CI/CD", years: 4 },
 			{ name: "HTML/CSS", years: 7 },
 			{ name: "Git", years: 7 },
-			{ name: "AI workflows (SDD)", years: 2 },
+			{ name: "AI workflows (SDD)", years: 1 },
 			{ name: "TeX", years: 9 },
 		],
 	},
@@ -287,30 +287,17 @@ export const SECTIONS: Section[] = [
 				icon: "github",
 			},
 			{
-				label: { EN: "npm packages", RU: "npm-пакеты" },
-				url: "https://www.npmjs.com/~x6p",
-				icon: "npm",
-			},
-			{
-				label: { EN: "SpreadMeta", RU: "SpreadMeta" },
-				url: "https://aparinaa.github.io/monitor",
-				icon: "spread",
-			},
-			{
-				label: {
-					EN: "KoronaPay calculator",
-					RU: "Калькулятор KoronaPay",
-				},
-				url: "https://coronacheck.vercel.app",
-				icon: "exchange",
-			},
-			{
 				label: {
 					EN: "NDA project at Yandex Frontend School",
 					RU: "NDA-проект в Школе разработки интерфейсов Яндекса",
 				},
 				url: "https://ya.ru",
 				icon: "ya",
+			},
+			{
+				label: { EN: "npm packages", RU: "npm-пакеты" },
+				url: "https://www.npmjs.com/~x6p",
+				icon: "npm",
 			},
 		],
 	},
