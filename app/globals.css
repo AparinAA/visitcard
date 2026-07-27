@@ -1,0 +1,756 @@
+/* ---------------------------------------------------------------- tokens */
+
+@property --p {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0;
+}
+
+:root {
+	--bg: #fbfbfd;
+	--card: #ffffff;
+	--fg: #16181d;
+	--fg-muted: #6b7280;
+	--fg-faint: #9aa1ac;
+	--line: #e7e9ee;
+	--accent: #0071f3;
+	--accent-soft: #0071f31a;
+	--trail-rgb: 0, 113, 243;
+	--shadow: 0 1px 2px rgba(16, 24, 40, 0.05),
+		0 10px 28px -14px rgba(16, 24, 40, 0.22);
+	--toolbar-h: 52px;
+	--radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #0c0d10;
+		--card: #16181d;
+		--fg: #eceef2;
+		--fg-muted: #9aa1ac;
+		--fg-faint: #6b7280;
+		--line: #262a32;
+		--accent: #4da3ff;
+		--accent-soft: #4da3ff1f;
+		--trail-rgb: 77, 163, 255;
+		--shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
+			0 10px 28px -14px rgba(0, 0, 0, 0.7);
+	}
+}
+
+/* ------------------------------------------------------------------ base */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--fg);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.55;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+p,
+ul {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+em {
+	font-style: normal;
+	color: var(--accent);
+	font-weight: 500;
+}
+
+code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 0.9em;
+	padding: 1px 5px;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+}
+
+.icon {
+	display: inline-block;
+	flex: none;
+	vertical-align: -0.15em;
+}
+
+.icon > svg {
+	display: block;
+}
+
+/* ------------------------------------------------------- language toggle */
+/* Both languages ship in the HTML; only one is ever displayed. */
+
+html[data-lang="EN"] [data-l="RU"],
+html[data-lang="RU"] [data-l="EN"] {
+	display: none;
+}
+
+/* ---------------------------------------------------------- cursor trail */
+/* Above the hero, below the content — the ribbon plays where there is
+   nothing to read and disappears the moment the CV scrolls over it. */
+
+.trail {
+	position: fixed;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+/* ------------------------------------------------------------------ hero */
+
+.hero {
+	position: sticky;
+	top: 0;
+	z-index: 0;
+	display: grid;
+	place-items: center;
+	height: 100svh;
+	padding: 0 24px;
+	text-align: center;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: radial-gradient(
+		60% 50% at 50% 42%,
+		var(--accent-soft),
+		transparent 70%
+	);
+}
+
+.hero__inner {
+	position: relative;
+	max-width: 900px;
+	transform-origin: 50% 40%;
+	will-change: opacity, transform, filter;
+}
+
+.hero__greeting {
+	font-size: clamp(2rem, 7vw, 4.25rem);
+	letter-spacing: -0.03em;
+}
+
+.hero__name {
+	margin-top: 0.35em;
+	font-size: clamp(1.1rem, 3.2vw, 1.9rem);
+	font-weight: 500;
+	color: var(--fg-muted);
+	letter-spacing: -0.01em;
+}
+
+.hero__role {
+	margin-top: 0.6em;
+	font-size: clamp(0.85rem, 1.8vw, 1rem);
+	color: var(--fg-faint);
+	animation: fade-in 0.8s ease 0.9s both;
+}
+
+.word {
+	display: inline-block;
+	animation: word-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+	animation-delay: var(--d, 0ms);
+}
+
+@keyframes word-rise {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 0.55em, 0);
+		filter: blur(8px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+		filter: blur(0);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.hero__scroll {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	margin-top: 3.5rem;
+	color: var(--fg-faint);
+	font-size: 0.72rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	animation: fade-in 0.8s ease 1.2s both;
+}
+
+.hero__scroll .icon {
+	animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+	0%,
+	100% {
+		transform: translateY(0);
+		opacity: 0.5;
+	}
+	50% {
+		transform: translateY(5px);
+		opacity: 1;
+	}
+}
+
+/* ------------------------------------------------------- scroll-linked motion */
+/* `--p` is written by components/ScrollMotion.tsx. It trails the real scroll
+   position by a few frames, which is what makes this read as a smooth
+   transition rather than a value bolted to the scrollbar. The rules are gated
+   on [data-motion] so the page stays fully readable without JavaScript. */
+
+html[data-motion="on"] .hero__inner {
+	opacity: clamp(0, calc(1 - var(--p) * 1.75), 1);
+	transform: translate3d(0, calc(var(--p) * -7vh), 0)
+		scale(calc(1 - var(--p) * 0.09));
+	filter: blur(calc(var(--p) * var(--p) * 9px));
+}
+
+html[data-motion="on"] .hero::before {
+	opacity: clamp(0, calc(1 - var(--p) * 1.4), 1);
+}
+
+html[data-motion="on"] .main {
+	opacity: clamp(0, calc(var(--p) * 2 - 0.45), 1);
+	transform: translate3d(0, calc((1 - var(--p)) * 5vh), 0);
+}
+
+/* --------------------------------------------------------------- content */
+
+/* The hero is `position: sticky` inside the body, so it stays pinned while
+   `.main` — opaque and one layer above — slides up over it. The hero occupies
+   100svh of flow, so the first card reaches the top of the viewport at roughly
+   the same moment --p saturates (it hits 1 at 85% of a viewport of scroll). */
+.main {
+	position: relative;
+	z-index: 2;
+	padding: 0 clamp(12px, 3vw, 28px) 0;
+	background: var(--bg);
+}
+
+.toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 8px;
+	height: var(--toolbar-h);
+	max-width: 1360px;
+	margin: 0 auto;
+	background: var(--bg);
+}
+
+.toolbar__cv {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	height: 30px;
+	padding: 0 10px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--fg-muted);
+	transition: border-color 0.2s, color 0.2s;
+}
+
+.toolbar__cv:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+.lang {
+	display: inline-flex;
+	gap: 6px;
+}
+
+.lang__btn {
+	display: grid;
+	place-items: center;
+	width: 38px;
+	height: 30px;
+	padding: 0;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: transparent;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: opacity 0.2s, border-color 0.2s;
+}
+
+.lang__btn:hover {
+	opacity: 0.85;
+}
+
+/* Driven by the attribute the head script sets, so the right flag is
+   highlighted in the first painted frame — before React hydrates. */
+html[data-lang="EN"] .lang__btn[data-lang="EN"],
+html[data-lang="RU"] .lang__btn[data-lang="RU"] {
+	opacity: 1;
+	border-color: var(--accent);
+}
+
+/* ----------------------------------------------------------------- cards */
+
+.grid {
+	display: grid;
+	gap: 14px;
+	max-width: 1360px;
+	margin: 0 auto;
+	padding-bottom: 24px;
+}
+
+.grid__side,
+.grid__main {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	min-width: 0;
+}
+
+@media (min-width: 900px) {
+	.grid {
+		grid-template-columns: 330px minmax(0, 1fr);
+		align-items: start;
+	}
+
+	.grid__side {
+		position: sticky;
+		top: calc(var(--toolbar-h) + 8px);
+	}
+}
+
+.card {
+	padding: 4px 18px 18px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--card);
+	box-shadow: var(--shadow);
+}
+
+.card__title {
+	position: sticky;
+	top: var(--toolbar-h);
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	height: 46px;
+	margin: 0 -18px 4px;
+	padding: 0 18px;
+	background: var(--card);
+	border-radius: var(--radius) var(--radius) 0 0;
+	font-size: 1.15rem;
+	letter-spacing: -0.01em;
+}
+
+/* -------------------------------------------------------------- sections */
+
+.about__name {
+	font-size: 1.05rem;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.links a {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	padding: 5px 8px;
+	margin-left: -8px;
+	border-radius: 8px;
+	color: var(--fg-muted);
+	font-size: 0.92rem;
+	transition: background 0.18s, color 0.18s;
+}
+
+.links a:hover {
+	background: var(--accent-soft);
+	color: var(--accent);
+}
+
+/* skills */
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.skill {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 4px 6px 4px 10px;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	font-size: 0.83rem;
+}
+
+.skill__name {
+	white-space: nowrap;
+}
+
+.skill__bars {
+	position: relative;
+	display: inline-flex;
+	gap: 2px;
+	min-width: 62px;
+	height: 14px;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.skill__bars i {
+	width: 9px;
+	height: 9px;
+	border-radius: 2px;
+	background: var(--accent);
+	opacity: 0.75;
+	transition: opacity 0.18s;
+}
+
+.skill__years {
+	position: absolute;
+	right: 0;
+	white-space: nowrap;
+	font-size: 0.72rem;
+	color: var(--fg-muted);
+	opacity: 0;
+	transition: opacity 0.18s;
+	pointer-events: none;
+}
+
+.skill:hover .skill__bars i {
+	opacity: 0;
+}
+
+.skill:hover .skill__years {
+	opacity: 1;
+}
+
+/* jobs */
+
+.jobs {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.job + .job {
+	padding-top: 22px;
+	border-top: 1px solid var(--line);
+}
+
+.job__role {
+	font-size: 1.02rem;
+}
+
+.job__company {
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--accent);
+}
+
+.job__period {
+	font-size: 0.82rem;
+	color: var(--fg-faint);
+}
+
+.job__note {
+	display: inline-block;
+	margin-top: 8px;
+	padding: 3px 10px;
+	border-radius: 999px;
+	background: var(--accent-soft);
+	color: var(--accent);
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+.job__scope {
+	margin-top: 10px;
+	font-weight: 600;
+	font-size: 0.92rem;
+}
+
+.job__bullets {
+	margin-top: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.job__bullets li {
+	position: relative;
+	padding-left: 16px;
+	font-size: 0.92rem;
+	color: var(--fg-muted);
+}
+
+.job__bullets li::before {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 0.62em;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: var(--fg-faint);
+}
+
+.job__stack {
+	margin-top: 12px;
+	font-size: 0.82rem;
+	color: var(--fg-muted);
+}
+
+.job__stackLabel {
+	display: block;
+	margin-bottom: 2px;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--fg-faint);
+}
+
+/* education / papers */
+
+.entries {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.entry h3 {
+	font-size: 1rem;
+}
+
+.entry__meta {
+	font-size: 0.9rem;
+	color: var(--fg-muted);
+}
+
+.entry__period {
+	font-size: 0.82rem;
+	color: var(--fg-faint);
+}
+
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 8px;
+}
+
+.chip {
+	padding: 3px 11px;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	font-size: 0.8rem;
+	color: var(--fg-muted);
+	transition: border-color 0.18s, color 0.18s;
+}
+
+.chip:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+/* hobbies */
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.tags li {
+	padding: 4px 12px;
+	border-radius: 999px;
+	background: var(--accent-soft);
+	color: var(--accent);
+	font-size: 0.85rem;
+}
+
+/* leetcode */
+
+.leet {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-top: 18px;
+	padding-top: 16px;
+	border-top: 1px solid var(--line);
+}
+
+.leet__skeleton {
+	width: 100%;
+	height: 108px;
+	border-radius: 10px;
+	background: linear-gradient(
+		90deg,
+		var(--line) 25%,
+		transparent 50%,
+		var(--line) 75%
+	);
+	background-size: 300% 100%;
+	animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+	to {
+		background-position: -300% 0;
+	}
+}
+
+.leet__ring {
+	width: 108px;
+	height: 108px;
+	flex: none;
+}
+
+.leet__track {
+	stroke: var(--line);
+}
+
+.leet__total {
+	fill: var(--fg);
+	font-size: 26px;
+	font-weight: 600;
+	text-anchor: middle;
+}
+
+.leet__caption {
+	fill: var(--fg-faint);
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	text-anchor: middle;
+	text-transform: uppercase;
+}
+
+.leet__legend {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	font-size: 0.82rem;
+	color: var(--fg-muted);
+}
+
+.leet__legend li {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.leet__legend i {
+	width: 8px;
+	height: 8px;
+	border-radius: 2px;
+	flex: none;
+}
+
+.leet__legend b {
+	color: var(--fg);
+	font-weight: 600;
+}
+
+.leet__rank {
+	margin-top: 4px;
+	font-size: 0.78rem;
+	color: var(--fg-faint);
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.footer {
+	display: flex;
+	justify-content: center;
+	padding: 28px 0 40px;
+	font-size: 0.8rem;
+	color: var(--fg-faint);
+}
+
+/* ------------------------------------------------------------ small screens */
+
+@media (max-width: 899px) {
+	.card__title {
+		font-size: 1.05rem;
+	}
+}
+
+/* --------------------------------------------------------- reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	html[data-motion="on"] .hero__inner,
+	html[data-motion="on"] .main,
+	html[data-motion="on"] .hero::before {
+		opacity: 1;
+		transform: none;
+		filter: none;
+	}
+}
