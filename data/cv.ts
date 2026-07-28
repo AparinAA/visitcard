@@ -29,7 +29,7 @@ export interface LinkItem {
 
 export interface Skill {
 	name: string;
-	/** Years of hands-on use; the bar caps at 5. */
+	/** Years of hands-on use, shown verbatim on the chip. */
 	years: number;
 }
 
@@ -60,7 +60,14 @@ export interface Paper {
 
 export type Section =
 	| { id: "about"; title: Text; kind: "about"; name: Text; links: LinkItem[] }
-	| { id: "skills"; title: Text; kind: "skills"; items: Skill[] }
+	| {
+			id: "skills";
+			title: Text;
+			kind: "skills";
+			/** Names the unit once, so each chip only needs the bare number. */
+			caption: Text;
+			items: Skill[];
+	  }
 	| { id: "experience"; title: Text; kind: "jobs"; items: Job[] }
 	| { id: "projects"; title: Text; kind: "links"; items: LinkItem[] }
 	| { id: "education"; title: Text; kind: "study"; items: Study[] }
@@ -117,6 +124,7 @@ export const SECTIONS: Section[] = [
 		id: "skills",
 		kind: "skills",
 		title: { EN: "Proficient", RU: "Навыки / Тех-стек" },
+		caption: { EN: "Years of experience", RU: "Лет опыта" },
 		items: [
 			{ name: "JavaScript", years: 7 },
 			{ name: "TypeScript", years: 6 },

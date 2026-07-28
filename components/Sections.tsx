@@ -1,15 +1,24 @@
-import { SECTIONS, type Job, type Section } from "@/data/cv";
+import { SECTIONS, type Job, type Section, type Text } from "@/data/cv";
 import { Icon } from "./Icon";
 import { T } from "./T";
 import { LeetCodeStats } from "./LeetCodeStats";
 
-/** The bar caps at five notches; anything longer just reads as "5+ years". */
-const MAX_BARS = 5;
+/**
+ * The chips show a bare number under a "Years of experience" caption, which
+ * reads fine visually but not aloud — this spells the unit out for assistive
+ * tech, in whichever language is active.
+ */
+function yearsText(n: number): Text {
+	const last = n % 10;
+	const teen = n % 100 >= 11 && n % 100 <= 14;
+	const ru =
+		!teen && last === 1
+			? "год"
+			: !teen && last >= 2 && last <= 4
+				? "года"
+				: "лет";
 
-function years(n: number) {
-	if (n > MAX_BARS) return "5+ years";
-	if (n < 1) return "< 1 year";
-	return n === 1 ? "1 year" : `${n} years`;
+	return { EN: n === 1 ? "1 year" : `${n} years`, RU: `${n} ${ru}` };
 }
 
 function JobEntry({ job }: { job: Job }) {
@@ -80,29 +89,26 @@ function Body({ section }: { section: Section }) {
 
 		case "skills":
 			return (
-				<ul className="skills">
-					{section.items.map((skill) => (
-						<li className="skill" key={skill.name}>
-							<span className="skill__name">{skill.name}</span>
-							<span
-								className="skill__bars"
-								title={years(skill.years)}
-							>
-								{Array.from({
-									length: Math.min(
-										Math.max(skill.years, 1),
-										MAX_BARS
-									),
-								}).map((_, i) => (
-									<i key={i} />
-								))}
-								<span className="skill__years">
-									{years(skill.years)}
+				<>
+					<ul className="skills">
+						{section.items.map((skill) => (
+							<li className="skill" key={skill.name}>
+								<span className="skill__name">
+									{skill.name}
 								</span>
-							</span>
-						</li>
-					))}
-				</ul>
+								<span
+									className="skill__years"
+									aria-hidden="true"
+								>
+									{skill.years}
+								</span>
+								<span className="sr-only">
+									<T v={yearsText(skill.years)} />
+								</span>
+							</li>
+						))}
+					</ul>
+				</>
 			);
 
 		case "jobs":
@@ -195,10 +201,19 @@ function Body({ section }: { section: Section }) {
 }
 
 function Card({ section }: { section: Section }) {
+	// The unit label rides inside the sticky header rather than sitting above
+	// the chips, so it cannot scroll away and leave bare numbers behind.
+	const caption = "caption" in section ? section.caption : null;
+
 	return (
 		<section className="card" id={section.id}>
 			<h2 className="card__title">
 				<T v={section.title} />
+				{caption && (
+					<span className="card__unit">
+						<T v={caption} />
+					</span>
+				)}
 			</h2>
 			<div className="card__body">
 				<Body section={section} />
